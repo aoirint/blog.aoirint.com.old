@@ -274,7 +274,9 @@ tree-view-git-status
 <li><a href="https://atom.io/packages/ide-typescript">ide-typescript</a></li>
 </ul>
 <p>TypeScript IDE機能</p>
-<p>デフォルトで同梱されているTypeScriptが使われるが、バージョンが古いため設定を変える。</p>
+<p>デフォルトで同梱されているTypeScriptが使われるが、バージョンが古いため設定を変える。
+そのまま使うと、Reactで<code>Cannot use JSX unless the '--jsx' flag is provided</code>などのエラーが出たり、
+TypeScriptの新しい記法が構文エラーとして表示されることがある。</p>
 <div class="highlight"><pre><span></span><code>npm <span class="nb">set</span> prefix ~/.node
 npm install -g typescript
 </code></pre></div>
