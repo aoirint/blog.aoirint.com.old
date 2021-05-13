@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>えやみぐさ</title><link>https://blog.aoirint.com/</link><description></description><lastBuildDate>Fri, 14 May 2021 01:50:00 +0900</lastBuildDate><item><title>ロータリエンコーダ付きステッピングモータをArduinoで制御して角度を取得する</title><link>https://blog.aoirint.com/entry/2020/stepping_motor/</link><description>&lt;h1 class="md_header_block" id="h_entry_2020_stepping_motor_index_md_ロータリエンコーダ付きステッピングモータをArduinoで制御して角度を取得する"&gt;ロータリエンコーダ付きステッピングモータをArduinoで制御して角度を取得する&lt;/h1&gt;
+&lt;h2 class="md_header_block" id="h_entry_2020_stepping_motor_index_md_機材"&gt;機材&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Arduino UNO（中華）&lt;/li&gt;
+&lt;li&gt;ロータリエンコーダ付きステッピングモータ&lt;ul&gt;
+&lt;li&gt;PKP214U06A-R2EL&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.orientalmotor.co.jp/products/detail.action?hinmei=PKP214U06A-R2EL-L"&gt;PKP214U06A-R2EL-L｜PKPシリーズ／PKシリーズ｜ステッピングモーター｜オリエンタルモーター株式会社&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;モータ部説明書（PDF、HM-7433J.pdf）&lt;/li&gt;
+&lt;li&gt;ロータリエンコーダ部説明書（PDF、HM-7439JE.pdf）&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.orientalmotor.co.jp/file_addon/products/st/image/tj_pkp214u06a-r2el-l_d.gif"&gt;特性図（画像）&lt;/a&gt;（DC24V駆動時）&lt;/li&gt;
+&lt;li&gt;モータ部&lt;ul&gt;
+&lt;li&gt;2相&lt;/li&gt;
+&lt;li&gt;ユニポーラ5本リード線&lt;/li&gt;
+&lt;li&gt;基本ステップ角度1.8°&lt;/li&gt;
+&lt;li&gt;AC 50&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description><pubDate>Tue, 06 Oct 2020 07:00:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2020-10-06 07:00:00.000000:/entry/2020/stepping_motor/</guid></item><item><title>GPU PC (Desktop) のセットアップメモ</title><link>https://blog.aoirint.com/entry/2020/gpu_pc_setup/</link><description>&lt;h1 class="md_header_block" id="h_entry_2020_gpu_pc_setup_index_md_GPU_PC_Desktop_のセットアップメモ"&gt;GPU PC (Desktop) のセットアップメモ&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://releases.ubuntu.com/18.04.5/" title="Ubuntu 18.04.5 LTS (Bionic Beaver)"&gt;Ubuntu 18.04.5 LTS (Bionic Beaver)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Ubuntu 18.04、Windows 10のデュアルブート環境を構築する。
+プロキシ下を想定しているので、不要な場合は適宜調整。&lt;/p&gt;
+&lt;h2 class="md_header_block" id="h_entry_2020_gpu_pc_setup_index_md_時刻ずれの解消"&gt;時刻ずれの解消&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://linux.just4fun.biz/?Linux%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A/%E3%83%87%E3%83%A5%E3%82%A2%E3%83%AB%E3%83%96%E3%83%BC%E3%83%88%E3%81%AEWindows%E6%99%82%E5%88%BB%E3%82%92UTC%E3%81%AB%E3%81%99%E3%82%8B" title="Linux環境設定/デュアルブートのWindows時刻をUTCにする - Linuxと過ごす"&gt;Linux環境設定/デュアルブートのWindows時刻をUTCにする - Linuxと過ごす&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;デュアルブート環境では、BIOSの時刻を介してWindows側の時刻管理（ローカル時間）とUbuntu側の時刻管理（UTC時間）が衝突して、タイムゾーンの時差分、時計がずれてしま&lt;/p&gt;</description><pubDate>Fri, 18 Sep 2020 20:00:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2020-09-18 20:00:00.000000:/entry/2020/gpu_pc_setup/</guid></item><item><title>Atom Text Editor Setup</title><link>https://blog.aoirint.com/entry/2021/atom_setup/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_atom_setup_index_md_Atom_Text_Editor_Setup"&gt;Atom Text Editor Setup&lt;/h1&gt;
+&lt;p&gt;GitHubが開発するElectron製高機能テキストエディタAtomをセットアップする。&lt;/p&gt;
+&lt;h2 class="md_header_block" id="h_entry_2021_atom_setup_index_md_Installation"&gt;Installation&lt;/h2&gt;
+&lt;h3 class="md_header_block" id="h_entry_2021_atom_setup_index_md_macOS_Windows"&gt;macOS, Windows&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://atom.io/"&gt;https://atom.io/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 class="md_header_block" id="h_entry_2021_atom_setup_index_md_Ubuntu"&gt;Ubuntu&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-linux"&gt;https://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-linux&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey &lt;span class="p"&gt;|&lt;/span&gt; sudo&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><pubDate>Fri, 14 May 2021 01:00:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-05-14 01:00:00.000000:/entry/2021/atom_setup/</guid></item><item><title>Atom + LaTeX in Docker</title><link>https://blog.aoirint.com/entry/2020/atom_latex_docker/</link><description>&lt;h1 class="md_header_block" id="h_entry_2020_atom_latex_docker_index_md_Atom_LaTeX_in_Docker"&gt;Atom + LaTeX in Docker&lt;/h1&gt;
+&lt;h2 class="md_header_block" id="h_entry_2020_atom_latex_docker_index_md_概要"&gt;概要&lt;/h2&gt;
+&lt;p&gt;LaTeXをホストにインストールせず、Docker内で動かしつつ、
+Atomからこれを利用できるようにする。&lt;/p&gt;
+&lt;h2 class="md_header_block" id="h_entry_2020_atom_latex_docker_index_md_Requirements"&gt;Requirements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu 18.04&lt;/li&gt;
+&lt;li&gt;Docker&lt;/li&gt;
+&lt;li&gt;Atom&lt;/li&gt;
+&lt;li&gt;Atom Packages&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://atom.io/packages/latex"&gt;latex&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 class="md_header_block" id="h_entry_2020_atom_latex_docker_index_md_Atom_Packages"&gt;Atom Packages&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atom.io/packages/latex"&gt;latex&lt;/a&gt;を入れれば最低限ビルドコマンドは叩けるようになる。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://atom.io/packages/latex"&gt;latex&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;シンタックスハイライト&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://atom.io/packages/language-latex"&gt;language-latex&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;アウトライン表示&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://atom.io/packages/document-outline"&gt;document-outline&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;PDFプレビュー&lt;ul&gt;
+&lt;li&gt;&lt;a href=""&gt;pdf-view&lt;/a&gt;（メモリリーク? Atomを一度閉じれば解消&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description><pubDate>Thu, 17 Sep 2020 08:35:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2020-09-17 08:35:00.000000:/entry/2020/atom_latex_docker/</guid></item><item><title>arduino-cliの使い方</title><link>https://blog.aoirint.com/entry/2020/arduino_cli_usage/</link><description>&lt;h1 class="md_header_block" id="h_entry_2020_arduino_cli_usage_index_md_arduino_cliの使い方"&gt;arduino-cliの使い方&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ arduino-cli version
+arduino-cli Version: 0.13.0 Commit: 693a045
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 class="md_header_block" id="h_entry_2020_arduino_cli_usage_index_md_インストール"&gt;インストール&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://arduino.github.io/arduino-cli/latest/installation/"&gt;Installation - Arduino CLI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://hub.docker.com/r/arduino/arduino-cli"&gt;arduino/arduino-cli&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://arduino.github.io/arduino-cli/latest/"&gt;Arduino CLIの公式ドキュメント&lt;/a&gt;に従ってインストールする。後述する&lt;code&gt;screen&lt;/code&gt;コマンドも合わせてインストールする。
+&lt;code&gt;arduino-cli&lt;/code&gt;はDockerイメージも配布されているのでお好みで。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;curl -fsSL https://raw.githubusercontent&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><pubDate>Mon, 09 Nov 2020 08:00:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2020-11-09 08:00:00.000000:/entry/2020/arduino_cli_usage/</guid></item><item><title>Open JTalk in Docker</title><link>https://blog.aoirint.com/entry/2021/open_jtalk/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_open_jtalk_index_md_Open_JTalk_in_Docker"&gt;Open JTalk in Docker&lt;/h1&gt;
+&lt;p&gt;以前にもOpen JTalkを触っていたが、時間が経った＆記事が雑だったのでDockerでまとめ直しておく。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://aoirint.hatenablog.com/entry/2019/05/25/080329"&gt;Open JTalk - aoirint's note&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Dockerfileを作る。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;FROM&lt;/span&gt; &lt;span class="s"&gt;ubuntu:bionic&lt;/span&gt;
+
+&lt;span class="k"&gt;RUN&lt;/span&gt; apt-get update &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+    apt-get install -y &lt;span class="se"&gt;\&lt;/span&gt;
+        open-jtalk &lt;span class="se"&gt;\&lt;/span&gt;
+        open-jtalk-mecab-naist-jdic &lt;span class="se"&gt;\&lt;/span&gt;
+        hts-voice-nitech-jp-atr503-m001
+
+&lt;span class="k"&gt;WORKDIR&lt;/span&gt;&lt;span class="s"&gt; /data&lt;/span&gt;
+&lt;span class="k"&gt;ENTRYPOINT&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;"op&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><pubDate>Sun, 04 Apr 2021 08:00:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-04-04 08:00:00.000000:/entry/2021/open_jtalk/</guid></item><item><title>Ubuntu/Raspberry Pi/Debianの時刻ずれを解消する</title><link>https://blog.aoirint.com/entry/2021/ubuntu_ntp/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_ubuntu_ntp_index_md_Ubuntu_Raspberry_Pi_Debianの時刻ずれを解消する"&gt;Ubuntu/Raspberry Pi/Debianの時刻ずれを解消する&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo apt update
+Get:1 http://raspbian.raspberrypi.org/raspbian buster InRelease &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;15&lt;/span&gt;.0 kB&lt;span class="o"&gt;]&lt;/span&gt;
+Get:2 http://archive.raspberrypi.org/debian buster InRelease &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;32&lt;/span&gt;.9 kB&lt;span class="o"&gt;]&lt;/span&gt;
+Reading package lists... Done  
+E: Release file &lt;span class="k"&gt;for&lt;/span&gt; http://raspbian.raspberrypi.org/&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><pubDate>Sun, 04 Apr 2021 06:00:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-04-04 06:00:00.000000:/entry/2021/ubuntu_ntp/</guid></item><item><title>SSH Port Forwardingを使ってNAT間で通信するPort Proxy Server in Docker</title><link>https://blog.aoirint.com/entry/2021/ssh_proxy_server_docker/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_ssh_proxy_server_docker_index_md_SSH_Port_Forwardingを使ってNAT間で通信するPort_Proxy_Server_in_Docker"&gt;SSH Port Forwardingを使ってNAT間で通信するPort Proxy Server in Docker&lt;/h1&gt;
+&lt;h2 class="md_header_block" id="h_entry_2021_ssh_proxy_server_docker_index_md_SSHポートフォワーディング_踏み台による中継接続"&gt;SSHポートフォワーディング：踏み台による中継接続&lt;/h2&gt;
+&lt;p&gt;SSHポートフォワーディングには、
+ローカルポートフォワーディング、
+リモートポートフォワーディングの2種類があります。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiita.com/mechamogera/items/b1bb9130273deb9426f5"&gt;sshポートフォワーディング - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ローカルポートフォワーディングでは、
+SSHサーバ側から見えるネットワークポートを
+SSHクライアント側に転送することができます。
+例えば、ファイアウォール（NAT）に守られたネットワーク（ネットワークA）&lt;/p&gt;</description><pubDate>Sun, 21 Mar 2021 03:32:29 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-03-21 03:32:29.000000:/entry/2021/ssh_proxy_server_docker/</guid></item><item><title>PsychopyでOpenCV画像をImageStimで表示する</title><link>https://blog.aoirint.com/entry/2021/psychopy_opencv_image/</link><description>&lt;section id="id1"&gt;
+&lt;h1 class="md_header_block" id="h_entry_2021_psychopy_opencv_image_index_rst_PsychopyでOpenCV画像をImageStimで表示する"&gt;PsychopyでOpenCV画像をImageStimで表示する&lt;/h1&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/psychopy/psychopy"&gt;Psychopy - GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;img alt="image.png" src="image.png"/&gt;
+&lt;img alt="screenshot.png" src="screenshot.png"/&gt;
+&lt;p&gt;y軸反転と画素値をfloat（0-1）に変換すればOK。&lt;/p&gt;
+&lt;div class="code-block"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;npimg&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ndarray&lt;/span&gt; &lt;span class="c1"&gt;# (height, width, num_channels)&lt;/span&gt;
+&lt;span class="n"&gt;stimimg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;flip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;npimg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;astype&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;float32&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;255&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;axis&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;section id="id2"&gt;
+&lt;h2 class="md_header_block" id="h_entry_2021_psychopy_opencv_image_index_rst_ウインドウに表示させるサンプル"&gt;ウインドウに表示させるサンプル&lt;/h2&gt;
+&lt;div class="code-block"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt; &lt;span class="c1"&gt;# numpy&amp;gt;=1.20.1&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;cv2&lt;/span&gt; &lt;span class="c1"&gt;# type: ignore # opencv-python&amp;gt;=4.5.&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/section&gt;</description><pubDate>Sun, 14 Feb 2021 22:00:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-02-14 22:00:00.000000:/entry/2021/psychopy_opencv_image/</guid></item><item><title>Sphinx</title><link>https://blog.aoirint.com/entry/2021/sphinx/</link><description>&lt;section id="id1"&gt;
+&lt;h1 class="md_header_block" id="h_entry_2021_sphinx_index_rst_Sphinx"&gt;Sphinx&lt;/h1&gt;
+&lt;p&gt;Python製のドキュメント生成ツール。&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Python 3.8.5&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sphinx 3.4.2&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://pypi.org/project/Sphinx/"&gt;Sphinx · PyPI&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="code-block"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip3 install Sphinx
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;section id="rest-restructuredtext"&gt;
+&lt;h2 class="md_header_block" id="h_entry_2021_sphinx_index_rst_reST_reStructuredText_"&gt;reST（reStructuredText）&lt;/h2&gt;
+&lt;p&gt;SphinxではデフォルトでreStructuredTextというマークアップ言語を使う。&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://www.sphinx-doc.org/ja/master/usage/restructuredtext/basics.html"&gt;https://www.sphinx-doc.org/ja/master/usage/restructuredtext/basics.html&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://atom.io/packages/language-restructuredtext"&gt;https://atom.io/packages/language-restruct&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/section&gt;&lt;/section&gt;</description><pubDate>Tue, 05 Jan 2021 07:40:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-01-05 07:40:00.000000:/entry/2021/sphinx/</guid></item></channel></rss>
