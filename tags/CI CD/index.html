@@ -174,12 +174,12 @@
 
 
 
-      <h2 class="article-title"><a href="../../entry/2021/gitlab_ci_docker_registry/">GitLab CIでDockerイメージをビルドしてContainer Registryにpushする</a></h2>
+      <h2 class="article-title"><a href="../../entry/2021/gitlab_ci_docker_registry/">GitLab CI, DockerイメージをビルドしてContainer Registryにpushする</a></h2>
 
 
 
       <div class='article-summary'>
-        GitLab CIでDockerイメージをビルドしてContainer Registryにpushする リポジトリ構造 .gitlab-ci.yml app/ Dockerfile .gitlab-ci.yml stages: - build build: stage: build image: docker:20.10 services: - docker:dind rules: - if: $CI_COMMIT_BRANCH == &#34;main&#34; script: - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_P
+        GitLab CI, DockerイメージをビルドしてContainer Registryにpushする リポジトリ構造 .gitlab-ci.yml app/ Dockerfile .gitlab-ci.yml stages: - build build: stage: build image: docker:20.10 services: - docker:dind rules: - if: $CI_COMMIT_BRANCH == &#34;main&#34; script: - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_P
       </div>
 
     </article>

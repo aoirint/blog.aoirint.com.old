@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>えやみぐさ</title><link>https://blog.aoirint.com/</link><description></description><lastBuildDate>Sat, 29 May 2021 02:00:00 +0900</lastBuildDate><item><title>GitLab CIでDockerイメージをビルドしてContainer Registryにpushする</title><link>https://blog.aoirint.com/entry/2021/gitlab_ci_docker_registry/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_gitlab_ci_docker_registry_index_md_GitLab_CIでDockerイメージをビルドしてContainer_Registryにpushする"&gt;GitLab CIでDockerイメージをビルドしてContainer Registryにpushする&lt;/h1&gt;
+<rss version="2.0"><channel><title>えやみぐさ</title><link>https://blog.aoirint.com/</link><description></description><lastBuildDate>Sat, 29 May 2021 02:00:00 +0900</lastBuildDate><item><title>GitLab CI, DockerイメージをビルドしてContainer Registryにpushする</title><link>https://blog.aoirint.com/entry/2021/gitlab_ci_docker_registry/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_gitlab_ci_docker_registry_index_md_GitLab_CI_DockerイメージをビルドしてContainer_Registryにpushする"&gt;GitLab CI, DockerイメージをビルドしてContainer Registryにpushする&lt;/h1&gt;
 &lt;h2 class="md_header_block" id="h_entry_2021_gitlab_ci_docker_registry_index_md_リポジトリ構造"&gt;リポジトリ構造&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;.gitlab-ci.yml&lt;/li&gt;
