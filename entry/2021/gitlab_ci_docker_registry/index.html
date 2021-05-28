@@ -186,7 +186,7 @@
   <span class="nt">services</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docker:dind</span>
   <span class="nt">rules</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">if</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">$CI_COMMIT_BRANCH == "master"</span>
+    <span class="p p-Indicator">-</span> <span class="nt">if</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">$CI_COMMIT_BRANCH == "main"</span>
   <span class="nt">script</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docker build ./app -t $CI_REGISTRY_IMAGE:latest</span>

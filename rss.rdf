@@ -16,9 +16,9 @@
   &lt;span class="nt"&gt;services&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;docker:dind&lt;/span&gt;
   &lt;span class="nt"&gt;rules&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;if&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;$CI_COMMIT_BRANCH == "master"&lt;/span&gt;
+    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;if&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;$CI_COMMIT_BRANCH == "main"&lt;/span&gt;
   &lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><pubDate>Sat, 29 May 2021 02:00:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-05-29 02:00:00.000000:/entry/2021/gitlab_ci_docker_registry/</guid></item><item><title>ロータリエンコーダ付きステッピングモータをArduinoで制御して角度を取得する</title><link>https://blog.aoirint.com/entry/2020/stepping_motor/</link><description>&lt;h1 class="md_header_block" id="h_entry_2020_stepping_motor_index_md_ロータリエンコーダ付きステッピングモータをArduinoで制御して角度を取得する"&gt;ロータリエンコーダ付きステッピングモータをArduinoで制御して角度を取得する&lt;/h1&gt;
+    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_P&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><pubDate>Sat, 29 May 2021 02:00:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-05-29 02:00:00.000000:/entry/2021/gitlab_ci_docker_registry/</guid></item><item><title>ロータリエンコーダ付きステッピングモータをArduinoで制御して角度を取得する</title><link>https://blog.aoirint.com/entry/2020/stepping_motor/</link><description>&lt;h1 class="md_header_block" id="h_entry_2020_stepping_motor_index_md_ロータリエンコーダ付きステッピングモータをArduinoで制御して角度を取得する"&gt;ロータリエンコーダ付きステッピングモータをArduinoで制御して角度を取得する&lt;/h1&gt;
 &lt;h2 class="md_header_block" id="h_entry_2020_stepping_motor_index_md_機材"&gt;機材&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Arduino UNO（中華）&lt;/li&gt;
