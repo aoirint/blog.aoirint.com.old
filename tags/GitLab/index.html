@@ -17,7 +17,7 @@
 
 
 
-<meta property="og:url" content="https://blog.aoirint.com/tags/Python/" />
+<meta property="og:url" content="https://blog.aoirint.com/tags/GitLab/" />
 <meta property="og:locale" content="ja-JP" />
 <meta property="og:type" content="article" />
 
@@ -141,233 +141,45 @@
 
 <div class="article-metadata">
   <div class="article-date">
-    2021-02-14
+    2021-05-29
   </div>
 
   <div class="article-tags">
 
-    <a href="../../category/Psychopy/" class="article-category">
-      Psychopy
+    <a href="../../category/GitLab/" class="article-category">
+      GitLab
     </a>
 
 
 
     <a href="./" class="article-tag">
-      Python
+      GitLab
     </a>
 
-    <a href="../Psychopy/" class="article-tag">
-      Psychopy
+    <a href="../GitLab Actions/" class="article-tag">
+      GitLab Actions
     </a>
 
-    <a href="../OpenCV/" class="article-tag">
-      OpenCV
+    <a href="../CI CD/" class="article-tag">
+      CI CD
     </a>
-
-  </div>
-
-</div>
-
-
-
-      <h2 class="article-title"><a href="../../entry/2021/psychopy_opencv_image/">PsychopyでOpenCV画像をImageStimで表示する</a></h2>
-
-
-
-      <div class='article-summary'>
-        PsychopyでOpenCV画像をImageStimで表示する Psychopy - GitHub y軸反転と画素値をfloat（0-1）に変換すればOK。 npimg: np.ndarray # (height, width, num_channels) stimimg = np.flip(npimg.astype(np.float32) / 255, axis=0) ウインドウに表示させるサンプル import numpy as np # numpy&gt;=1.20.1 import cv2 # type: ignore # opencv-python&gt;=4.5.
-      </div>
-
-    </article>
-
-    <hr>
-
-
-
-
-
-    <article class="article">
-      
-
-<div class="article-metadata">
-  <div class="article-date">
-    2021-01-05
-  </div>
-
-  <div class="article-tags">
-
-    <a href="../../category/Documentation/" class="article-category">
-      Documentation
-    </a>
-
-
-
-    <a href="./" class="article-tag">
-      Python
-    </a>
-
-    <a href="../Sphinx/" class="article-tag">
-      Sphinx
-    </a>
-
-  </div>
-
-</div>
-
-
-
-      <h2 class="article-title"><a href="../../entry/2021/sphinx/">Sphinx</a></h2>
-
-
-
-      <div class='article-summary'>
-        Sphinx Python製のドキュメント生成ツール。 Python 3.8.5 Sphinx 3.4.2 Sphinx · PyPI pip3 install Sphinx reST（reStructuredText） SphinxではデフォルトでreStructuredTextというマークアップ言語を使う。 https://www.sphinx-doc.org/ja/master/usage/restructuredtext/basics.html https://atom.io/packages/language-restruct
-      </div>
-
-    </article>
-
-    <hr>
-
-
-
-
-
-    <article class="article">
-      
-
-<div class="article-metadata">
-  <div class="article-date">
-    2020-12-08
-  </div>
-
-  <div class="article-tags">
-
-    <a href="../../category/Docker/" class="article-category">
-      Docker
-    </a>
-
-
 
     <a href="../Docker/" class="article-tag">
       Docker
     </a>
 
-    <a href="./" class="article-tag">
-      Python
-    </a>
-
   </div>
 
 </div>
 
 
 
-      <h2 class="article-title"><a href="../../entry/2020/dockerfile_python/">Pythonを追加するDockerfile</a></h2>
+      <h2 class="article-title"><a href="../../entry/2021/gitlab_ci_docker_registry/">GitLab CIでDockerイメージをビルドしてContainer Registryにpushする</a></h2>
 
 
 
       <div class='article-summary'>
-        Pythonを追加するDockerfile
-      </div>
-
-    </article>
-
-    <hr>
-
-
-
-
-
-    <article class="article">
-      
-
-<div class="article-metadata">
-  <div class="article-date">
-    2020-09-28
-  </div>
-
-  <div class="article-tags">
-
-    <a href="../../category/Python/" class="article-category">
-      Python
-    </a>
-
-
-
-    <a href="./" class="article-tag">
-      Python
-    </a>
-
-    <a href="../Requests/" class="article-tag">
-      Requests
-    </a>
-
-  </div>
-
-</div>
-
-
-
-      <h2 class="article-title"><a href="../../entry/2020/python_requests/">Python Requests</a></h2>
-
-
-
-      <div class='article-summary'>
-        Python Requests
-      </div>
-
-    </article>
-
-    <hr>
-
-
-
-
-
-    <article class="article">
-      
-
-<div class="article-metadata">
-  <div class="article-date">
-    2020-09-28
-  </div>
-
-  <div class="article-tags">
-
-    <a href="../../category/Python/" class="article-category">
-      Python
-    </a>
-
-
-
-    <a href="../Docker/" class="article-tag">
-      Docker
-    </a>
-
-    <a href="../Docker Compose/" class="article-tag">
-      Docker Compose
-    </a>
-
-    <a href="./" class="article-tag">
-      Python
-    </a>
-
-    <a href="../Selenium/" class="article-tag">
-      Selenium
-    </a>
-
-  </div>
-
-</div>
-
-
-
-      <h2 class="article-title"><a href="../../entry/2020/docker_compose_python_selenium/">docker-composeによるPython + Selenium環境</a></h2>
-
-
-
-      <div class='article-summary'>
-        docker-composeでPython + Seleniumを使える環境を整備する
+        GitLab CIでDockerイメージをビルドしてContainer Registryにpushする リポジトリ構造 .gitlab-ci.yml app/ Dockerfile .gitlab-ci.yml stages: - build build: stage: build image: docker:20.10 services: - docker:dind rules: - if: $CI_COMMIT_BRANCH == &#34;master&#34; script: - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY
       </div>
 
     </article>
@@ -565,7 +377,7 @@
       </a>
 
     <li>
-      <a href="../GitLab/" class="tag-item">
+      <a href="./" class="tag-item">
         GitLab (1)
       </a>
 
@@ -640,7 +452,7 @@
       </a>
 
     <li>
-      <a href="./" class="tag-item">
+      <a href="../Python/" class="tag-item">
         Python (5)
       </a>
 

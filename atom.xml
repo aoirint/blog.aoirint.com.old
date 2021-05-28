@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>えやみぐさ</title><link href="https://blog.aoirint.com/" rel="alternate"></link><link href="https://blog.aoirint.com/atom.xml" rel="self"></link><id>https://blog.aoirint.com/</id><updated>2021-05-14T01:50:00+09:00</updated><entry><title>ロータリエンコーダ付きステッピングモータをArduinoで制御して角度を取得する</title><link href="https://blog.aoirint.com/entry/2020/stepping_motor/" rel="alternate"></link><published>2020-10-06T07:00:00+09:00</published><updated>2021-05-14T01:50:00+09:00</updated><id>tag:blog.aoirint.com,2020-10-06 07:00:00.000000:/entry/2020/stepping_motor/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2020_stepping_motor_index_md_ロータリエンコーダ付きステッピングモータをArduinoで制御して角度を取得する"&gt;ロータリエンコーダ付きステッピングモータをArduinoで制御して角度を取得する&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>えやみぐさ</title><link href="https://blog.aoirint.com/" rel="alternate"></link><link href="https://blog.aoirint.com/atom.xml" rel="self"></link><id>https://blog.aoirint.com/</id><updated>2021-05-29T02:00:00+09:00</updated><entry><title>GitLab CIでDockerイメージをビルドしてContainer Registryにpushする</title><link href="https://blog.aoirint.com/entry/2021/gitlab_ci_docker_registry/" rel="alternate"></link><published>2021-05-29T02:00:00+09:00</published><updated>2021-05-29T02:00:00+09:00</updated><id>tag:blog.aoirint.com,2021-05-29 02:00:00.000000:/entry/2021/gitlab_ci_docker_registry/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2021_gitlab_ci_docker_registry_index_md_GitLab_CIでDockerイメージをビルドしてContainer_Registryにpushする"&gt;GitLab CIでDockerイメージをビルドしてContainer Registryにpushする&lt;/h1&gt;
+&lt;h2 class="md_header_block" id="h_entry_2021_gitlab_ci_docker_registry_index_md_リポジトリ構造"&gt;リポジトリ構造&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;.gitlab-ci.yml&lt;/li&gt;
+&lt;li&gt;app/&lt;/li&gt;
+&lt;li&gt;Dockerfile&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 class="md_header_block" id="h_entry_2021_gitlab_ci_docker_registry_index_md__gitlab_ci_yml"&gt;.gitlab-ci.yml&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;stages&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;build&lt;/span&gt;
+
+&lt;span class="nt"&gt;build&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="nt"&gt;stage&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;build&lt;/span&gt;
+  &lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;docker:20.10&lt;/span&gt;
+  &lt;span class="nt"&gt;services&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;docker:dind&lt;/span&gt;
+  &lt;span class="nt"&gt;rules&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;if&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;$CI_COMMIT_BRANCH == "master"&lt;/span&gt;
+  &lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>ロータリエンコーダ付きステッピングモータをArduinoで制御して角度を取得する</title><link href="https://blog.aoirint.com/entry/2020/stepping_motor/" rel="alternate"></link><published>2020-10-06T07:00:00+09:00</published><updated>2021-05-14T01:50:00+09:00</updated><id>tag:blog.aoirint.com,2020-10-06 07:00:00.000000:/entry/2020/stepping_motor/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2020_stepping_motor_index_md_ロータリエンコーダ付きステッピングモータをArduinoで制御して角度を取得する"&gt;ロータリエンコーダ付きステッピングモータをArduinoで制御して角度を取得する&lt;/h1&gt;
 &lt;h2 class="md_header_block" id="h_entry_2020_stepping_motor_index_md_機材"&gt;機材&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Arduino UNO（中華）&lt;/li&gt;
@@ -114,24 +133,4 @@ SSHクライアント側に転送することができます。
 &lt;h2 class="md_header_block" id="h_entry_2021_psychopy_opencv_image_index_rst_ウインドウに表示させるサンプル"&gt;ウインドウに表示させるサンプル&lt;/h2&gt;
 &lt;div class="code-block"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt; &lt;span class="c1"&gt;# numpy&amp;gt;=1.20.1&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;cv2&lt;/span&gt; &lt;span class="c1"&gt;# type: ignore # opencv-python&amp;gt;=4.5.&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/section&gt;</summary></entry><entry><title>Sphinx</title><link href="https://blog.aoirint.com/entry/2021/sphinx/" rel="alternate"></link><published>2021-01-05T07:40:00+09:00</published><updated>2021-01-05T07:40:00+09:00</updated><id>tag:blog.aoirint.com,2021-01-05 07:40:00.000000:/entry/2021/sphinx/</id><summary type="html">&lt;section id="id1"&gt;
-&lt;h1 class="md_header_block" id="h_entry_2021_sphinx_index_rst_Sphinx"&gt;Sphinx&lt;/h1&gt;
-&lt;p&gt;Python製のドキュメント生成ツール。&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;Python 3.8.5&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Sphinx 3.4.2&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://pypi.org/project/Sphinx/"&gt;Sphinx · PyPI&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class="code-block"&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip3 install Sphinx
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;section id="rest-restructuredtext"&gt;
-&lt;h2 class="md_header_block" id="h_entry_2021_sphinx_index_rst_reST_reStructuredText_"&gt;reST（reStructuredText）&lt;/h2&gt;
-&lt;p&gt;SphinxではデフォルトでreStructuredTextというマークアップ言語を使う。&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://www.sphinx-doc.org/ja/master/usage/restructuredtext/basics.html"&gt;https://www.sphinx-doc.org/ja/master/usage/restructuredtext/basics.html&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://atom.io/packages/language-restructuredtext"&gt;https://atom.io/packages/language-restruct&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/section&gt;&lt;/section&gt;</summary></entry></feed>
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;cv2&lt;/span&gt; &lt;span class="c1"&gt;# type: ignore # opencv-python&amp;gt;=4.5.&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/section&gt;</summary></entry></feed>

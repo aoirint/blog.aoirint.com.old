@@ -141,6 +141,60 @@
 
 <div class="article-metadata">
   <div class="article-date">
+    2021-05-29
+  </div>
+
+  <div class="article-tags">
+
+    <a href="../../category/GitLab/" class="article-category">
+      GitLab
+    </a>
+
+
+
+    <a href="../GitLab/" class="article-tag">
+      GitLab
+    </a>
+
+    <a href="../GitLab Actions/" class="article-tag">
+      GitLab Actions
+    </a>
+
+    <a href="./" class="article-tag">
+      CI CD
+    </a>
+
+    <a href="../Docker/" class="article-tag">
+      Docker
+    </a>
+
+  </div>
+
+</div>
+
+
+
+      <h2 class="article-title"><a href="../../entry/2021/gitlab_ci_docker_registry/">GitLab CIでDockerイメージをビルドしてContainer Registryにpushする</a></h2>
+
+
+
+      <div class='article-summary'>
+        GitLab CIでDockerイメージをビルドしてContainer Registryにpushする リポジトリ構造 .gitlab-ci.yml app/ Dockerfile .gitlab-ci.yml stages: - build build: stage: build image: docker:20.10 services: - docker:dind rules: - if: $CI_COMMIT_BRANCH == &#34;master&#34; script: - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY
+      </div>
+
+    </article>
+
+    <hr>
+
+
+
+
+
+    <article class="article">
+      
+
+<div class="article-metadata">
+  <div class="article-date">
     2020-09-27
   </div>
 
@@ -321,6 +375,11 @@
       </a>
   
     <li>
+      <a href="../../category/GitLab/" class="category-item">
+        GitLab (1)
+      </a>
+  
+    <li>
       <a href="../../category/LaTeX/" class="category-item">
         LaTeX (2)
       </a>
@@ -392,7 +451,7 @@
 
     <li>
       <a href="./" class="tag-item">
-        CI CD (2)
+        CI CD (3)
       </a>
 
     <li>
@@ -407,7 +466,7 @@
 
     <li>
       <a href="../Docker/" class="tag-item">
-        Docker (10)
+        Docker (11)
       </a>
 
     <li>
@@ -423,6 +482,16 @@
     <li>
       <a href="../GitHub Actions/" class="tag-item">
         GitHub Actions (2)
+      </a>
+
+    <li>
+      <a href="../GitLab/" class="tag-item">
+        GitLab (1)
+      </a>
+
+    <li>
+      <a href="../GitLab Actions/" class="tag-item">
+        GitLab Actions (1)
       </a>
 
     <li>

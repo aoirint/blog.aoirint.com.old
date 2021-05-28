@@ -172,6 +172,7 @@
 <ul>
 <li>HTTP Proxy: <code>proxy</code> <code>port</code></li>
 <li>HTTPS Proxy: <code>proxy</code> <code>port</code></li>
+<li>Ignore Hosts: <code>localhost, 127.0.0.0/8, ::1</code>（プライベートネットワーク・組織内ネットワークのIPアドレス範囲またはドメインも追加する）</li>
 </ul>
 <p>curlやwget、pipなど主要コマンドは
 注意点として、別ユーザとしてコマンドを実行すると環境変数が引き継がれない。
@@ -193,6 +194,7 @@ Defaults env_keep+="EDITOR"
 <p>/etc/environment</p>
 <div class="highlight"><pre><span></span><code>HTTP_PROXY=http://proxy:port
 HTTPS_PROXY=http://proxy:port
+NO_PROXY=localhost, 127.0.0.0/8, ::1
 </code></pre></div>
 <h2 class="md_header_block" id="h_entry_2020_ubuntu_proxy_index_md_apt">apt</h2>
 <p>/etc/apt/apt.conf</p>
