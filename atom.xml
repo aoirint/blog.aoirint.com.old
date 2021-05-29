@@ -3,8 +3,10 @@
 &lt;h2 class="md_header_block" id="h_entry_2021_gitlab_ci_docker_registry_index_md_リポジトリ構造"&gt;リポジトリ構造&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;.gitlab-ci.yml&lt;/li&gt;
-&lt;li&gt;app/&lt;/li&gt;
+&lt;li&gt;app/&lt;ul&gt;
 &lt;li&gt;Dockerfile&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 class="md_header_block" id="h_entry_2021_gitlab_ci_docker_registry_index_md__gitlab_ci_yml"&gt;.gitlab-ci.yml&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;stages&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
