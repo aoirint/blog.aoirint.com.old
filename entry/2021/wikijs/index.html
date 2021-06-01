@@ -218,26 +218,26 @@ OS: Ubuntu Desktop 18.04
 <p>wikiサービスのポートの割り当てはホストのnginxからリバースプロキシすることを想定している。</p>
 <h2 class="md_header_block" id="h_entry_2021_wikijs_index_md_初期設定">初期設定</h2>
 <p>ポートにアクセスすると初期（管理者）アカウントの設定を求められる。</p>
-<p><img alt="wikijs_configure_first_account.png" src="/wikijs/wikijs_configure_first_account.png"/></p>
+<p><img alt="wikijs_configure_first_account.png" src="images/wikijs_configure_first_account.png"/></p>
 <p>管理者アカウント作成後、インデックスページの作成を求められる。</p>
-<p><img alt="wikijs_first_page_1.png" src="/wikijs/wikijs_first_page_1.png"/>
-<img alt="wikijs_first_page_2.png" src="/wikijs/wikijs_first_page_2.png"/>
-<img alt="wikijs_first_page_3.png" src="/wikijs/wikijs_first_page_3.png"/></p>
+<p><img alt="wikijs_first_page_1.png" src="images/wikijs_first_page_1.png"/>
+<img alt="wikijs_first_page_2.png" src="images/wikijs_first_page_2.png"/>
+<img alt="wikijs_first_page_3.png" src="images/wikijs_first_page_3.png"/></p>
 <h2 class="md_header_block" id="h_entry_2021_wikijs_index_md_ロケール">ロケール</h2>
 <p>Wikiページの言語にあたる、ロケールの設定が悩ましいところ。</p>
 <p>言語を変えるとUIの言語だけでなくページ作成時のデフォルトURLプレフィクス（<code>/en/PAGE</code>とか<code>/ja/PAGE</code>）が変わる。</p>
 <p>マニュアル用のスクリーンショットは<code>en</code>で撮りたいが、ページの言語は<code>ja</code>なのでプレフィクスは<code>/ja</code>にしたい、というのは都度切り替えないとできないかもしれない。</p>
-<p><img alt="wikijs_locale_en.png" src="/wikijs/wikijs_locale_en.png"/></p>
-<p><img alt="wikijs_locale_ja.png" src="/wikijs/wikijs_locale_ja.png"/></p>
+<p><img alt="wikijs_locale_en.png" src="images/wikijs_locale_en.png"/></p>
+<p><img alt="wikijs_locale_ja.png" src="images/wikijs_locale_ja.png"/></p>
 <h2 class="md_header_block" id="h_entry_2021_wikijs_index_md_非公開Wiki">非公開Wiki</h2>
 <ul>
 <li>https://docs.requarks.io/groups (Guides &gt; Private Wiki)</li>
 </ul>
 <p>管理画面の<code>Users &gt; Groups &gt; Guests</code>のPermissionsをすべて無効にする。</p>
-<p><img alt="wikijs_users_groups.png" src="/wikijs/wikijs_users_groups.png"/></p>
-<p><img alt="wikijs_group_permissions.png" src="/wikijs/wikijs_group_permissions.png"/></p>
+<p><img alt="wikijs_users_groups.png" src="images/wikijs_users_groups.png"/></p>
+<p><img alt="wikijs_group_permissions.png" src="images/wikijs_group_permissions.png"/></p>
 <p>権限のないページを開くとUnauthorizedページが表示される。</p>
-<p><img alt="wikijs_unauthorized.png" src="/wikijs/wikijs_unauthorized.png"/></p>
+<p><img alt="wikijs_unauthorized.png" src="images/wikijs_unauthorized.png"/></p>
 <h2 class="md_header_block" id="h_entry_2021_wikijs_index_md_Gitリポジトリによる管理">Gitリポジトリによる管理</h2>
 <p>管理画面の<code>Modules &gt; Storage &gt; Git</code>から、WikiデータをリモートGitリポジトリにバックアップするように設定できる。
 またバックアップだけでなく、Gitリポジトリ側の変更をpullすることもでき、双方向に変更をやり取りすることもできるらしい。</p>
@@ -250,11 +250,11 @@ OS: Ubuntu Desktop 18.04
 <p>Gitストレージを設定する前に投稿した記事や画像は変更が加えられるまで同期されない。
 条件は不明だが、内部エラーの影響か一部の画像ファイルがバージョン管理されないことがあった。
 再アップロードで解消するが若干の注意を要するかもしれない。</p>
-<p><img alt="wikijs_git_storage.png" src="/wikijs/wikijs_git_storage.png"/></p>
+<p><img alt="wikijs_git_storage.png" src="images/wikijs_git_storage.png"/></p>
 <p>Markdownページは、以下のようなYAMLヘッダ（Front Matter）がついたファイルとして保存される。</p>
 <div class="highlight"><pre><span></span><code>---
 title: Wiki.jsのセットアップ
-description: 
+description:
 published: true
 date: 2021-06-01T19:27:44.133Z
 tags: wikijs, wiki
