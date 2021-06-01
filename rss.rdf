@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0"><channel><title>えやみぐさ</title><link>https://blog.aoirint.com/</link><description></description><lastBuildDate>Tue, 01 Jun 2021 05:00:00 +0900</lastBuildDate><item><title>Wiki.jsのセットアップ</title><link>https://blog.aoirint.com/entry/2021/wikijs/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_wikijs_index_md_Wiki_jsのセットアップ"&gt;Wiki.jsのセットアップ&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://js.wiki/get-started"&gt;https://js.wiki/get-started&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gigazine.net/news/20201003-wiki-js/"&gt;無料とは思えない多機能っぷりなWikiインフラ「Wiki.js」レビュー、自前でホスト＆外部サービスと連携可能 - GIGAZINE&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 class="md_header_block" id="h_entry_2021_wikijs_index_md_メモリ消費量"&gt;メモリ消費量&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ docker stats
 CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O         PIDS
-e225b6b77209   wikijs_wiki_1   &lt;span class="m"&gt;0&lt;/span&gt;.01%     &lt;span class="m"&gt;127&lt;/span&gt;.6MiB / &lt;span class="m"&gt;7&lt;/span&gt;.681GiB   &lt;span class="m"&gt;1&lt;/span&gt;.62%     &lt;span class="m"&gt;13&lt;/span&gt;.1MB / &lt;span class="m"&gt;22&lt;/span&gt;.7MB   &lt;span class="m"&gt;44&lt;/span&gt;.5MB / &lt;span class="m"&gt;1&lt;/span&gt;.45MB   &lt;span class="m"&gt;11&lt;/span&gt;
-13d085313406   wikijs_db_1     &lt;span class="m"&gt;0&lt;/span&gt;.00%     &lt;span class="m"&gt;44&lt;/span&gt;.57MiB / &lt;span class="m"&gt;7&lt;/span&gt;.681GiB   &lt;span class="m"&gt;0&lt;/span&gt;.57%     &lt;span class="m"&gt;6&lt;/span&gt;.64MB / &lt;span class="m"&gt;4&lt;/span&gt;.09MB   &lt;span class="m"&gt;4&lt;/span&gt;.27MB / 102MB    &lt;span class="m"&gt;8&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;初期状態で150-200M&lt;/p&gt;</description><pubDate>Tue, 01 Jun 2021 05:00:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-06-01 05:00:00.000000:/entry/2021/wikijs/</guid></item><item><title>GitLab CI, DockerイメージをビルドしてContainer Registryにpushする</title><link>https://blog.aoirint.com/entry/2021/gitlab_ci_docker_registry/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_gitlab_ci_docker_registry_index_md_GitLab_CI_DockerイメージをビルドしてContainer_Registryにpushする"&gt;GitLab CI, DockerイメージをビルドしてContainer Registryにpushする&lt;/h1&gt;
+e225b6b77209   wikijs_wiki_1   &lt;span class="m"&gt;0&lt;/span&gt;.01%     &lt;span class="m"&gt;127&lt;/span&gt;.6MiB / &lt;span class="m"&gt;7&lt;/span&gt;.681GiB   &lt;span class="m"&gt;1&lt;/span&gt;.62%     &lt;span class="m"&gt;13&lt;/span&gt;.1MB / &lt;span class="m"&gt;22&lt;/span&gt;.7MB   &lt;span class="m"&gt;44&lt;/span&gt;.5MB / &lt;span class="m"&gt;1&lt;/span&gt;.45MB&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><pubDate>Tue, 01 Jun 2021 05:00:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-06-01 05:00:00.000000:/entry/2021/wikijs/</guid></item><item><title>GitLab CI, DockerイメージをビルドしてContainer Registryにpushする</title><link>https://blog.aoirint.com/entry/2021/gitlab_ci_docker_registry/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_gitlab_ci_docker_registry_index_md_GitLab_CI_DockerイメージをビルドしてContainer_Registryにpushする"&gt;GitLab CI, DockerイメージをビルドしてContainer Registryにpushする&lt;/h1&gt;
 &lt;h2 class="md_header_block" id="h_entry_2021_gitlab_ci_docker_registry_index_md_リポジトリ構造"&gt;リポジトリ構造&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;.gitlab-ci.yml&lt;/li&gt;
