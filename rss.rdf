@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>えやみぐさ</title><link>https://blog.aoirint.com/</link><description></description><lastBuildDate>Sat, 29 May 2021 02:00:00 +0900</lastBuildDate><item><title>GitLab CI, DockerイメージをビルドしてContainer Registryにpushする</title><link>https://blog.aoirint.com/entry/2021/gitlab_ci_docker_registry/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_gitlab_ci_docker_registry_index_md_GitLab_CI_DockerイメージをビルドしてContainer_Registryにpushする"&gt;GitLab CI, DockerイメージをビルドしてContainer Registryにpushする&lt;/h1&gt;
+<rss version="2.0"><channel><title>えやみぐさ</title><link>https://blog.aoirint.com/</link><description></description><lastBuildDate>Tue, 01 Jun 2021 05:00:00 +0900</lastBuildDate><item><title>Wiki.jsのセットアップ</title><link>https://blog.aoirint.com/entry/2021/wikijs/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_wikijs_index_md_Wiki_jsのセットアップ"&gt;Wiki.jsのセットアップ&lt;/h1&gt;
+&lt;h2 class="md_header_block" id="h_entry_2021_wikijs_index_md_メモリ消費量"&gt;メモリ消費量&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ docker stats
+CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O         PIDS
+e225b6b77209   wikijs_wiki_1   &lt;span class="m"&gt;0&lt;/span&gt;.01%     &lt;span class="m"&gt;127&lt;/span&gt;.6MiB / &lt;span class="m"&gt;7&lt;/span&gt;.681GiB   &lt;span class="m"&gt;1&lt;/span&gt;.62%     &lt;span class="m"&gt;13&lt;/span&gt;.1MB / &lt;span class="m"&gt;22&lt;/span&gt;.7MB   &lt;span class="m"&gt;44&lt;/span&gt;.5MB / &lt;span class="m"&gt;1&lt;/span&gt;.45MB   &lt;span class="m"&gt;11&lt;/span&gt;
+13d085313406   wikijs_db_1     &lt;span class="m"&gt;0&lt;/span&gt;.00%     &lt;span class="m"&gt;44&lt;/span&gt;.57MiB / &lt;span class="m"&gt;7&lt;/span&gt;.681GiB   &lt;span class="m"&gt;0&lt;/span&gt;.57%     &lt;span class="m"&gt;6&lt;/span&gt;.64MB / &lt;span class="m"&gt;4&lt;/span&gt;.09MB   &lt;span class="m"&gt;4&lt;/span&gt;.27MB / 102MB    &lt;span class="m"&gt;8&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;初期状態で150-200M&lt;/p&gt;</description><pubDate>Tue, 01 Jun 2021 05:00:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-06-01 05:00:00.000000:/entry/2021/wikijs/</guid></item><item><title>GitLab CI, DockerイメージをビルドしてContainer Registryにpushする</title><link>https://blog.aoirint.com/entry/2021/gitlab_ci_docker_registry/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_gitlab_ci_docker_registry_index_md_GitLab_CI_DockerイメージをビルドしてContainer_Registryにpushする"&gt;GitLab CI, DockerイメージをビルドしてContainer Registryにpushする&lt;/h1&gt;
 &lt;h2 class="md_header_block" id="h_entry_2021_gitlab_ci_docker_registry_index_md_リポジトリ構造"&gt;リポジトリ構造&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;.gitlab-ci.yml&lt;/li&gt;
@@ -120,19 +127,4 @@ E: Release file &lt;span class="k"&gt;for&lt;/span&gt; http://raspbian.raspberry
 &lt;p&gt;ローカルポートフォワーディングでは、
 SSHサーバ側から見えるネットワークポートを
 SSHクライアント側に転送することができます。
-例えば、ファイアウォール（NAT）に守られたネットワーク（ネットワークA）&lt;/p&gt;</description><pubDate>Sun, 21 Mar 2021 03:32:29 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-03-21 03:32:29.000000:/entry/2021/ssh_proxy_server_docker/</guid></item><item><title>PsychopyでOpenCV画像をImageStimで表示する</title><link>https://blog.aoirint.com/entry/2021/psychopy_opencv_image/</link><description>&lt;section id="id1"&gt;
-&lt;h1 class="md_header_block" id="h_entry_2021_psychopy_opencv_image_index_rst_PsychopyでOpenCV画像をImageStimで表示する"&gt;PsychopyでOpenCV画像をImageStimで表示する&lt;/h1&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://github.com/psychopy/psychopy"&gt;Psychopy - GitHub&lt;/a&gt;&lt;/p&gt;
-&lt;img alt="image.png" src="image.png"/&gt;
-&lt;img alt="screenshot.png" src="screenshot.png"/&gt;
-&lt;p&gt;y軸反転と画素値をfloat（0-1）に変換すればOK。&lt;/p&gt;
-&lt;div class="code-block"&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;npimg&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ndarray&lt;/span&gt; &lt;span class="c1"&gt;# (height, width, num_channels)&lt;/span&gt;
-&lt;span class="n"&gt;stimimg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;flip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;npimg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;astype&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;float32&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;255&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;axis&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;section id="id2"&gt;
-&lt;h2 class="md_header_block" id="h_entry_2021_psychopy_opencv_image_index_rst_ウインドウに表示させるサンプル"&gt;ウインドウに表示させるサンプル&lt;/h2&gt;
-&lt;div class="code-block"&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt; &lt;span class="c1"&gt;# numpy&amp;gt;=1.20.1&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;cv2&lt;/span&gt; &lt;span class="c1"&gt;# type: ignore # opencv-python&amp;gt;=4.5.&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/section&gt;</description><pubDate>Sun, 14 Feb 2021 22:00:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-02-14 22:00:00.000000:/entry/2021/psychopy_opencv_image/</guid></item></channel></rss>
+例えば、ファイアウォール（NAT）に守られたネットワーク（ネットワークA）&lt;/p&gt;</description><pubDate>Sun, 21 Mar 2021 03:32:29 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-03-21 03:32:29.000000:/entry/2021/ssh_proxy_server_docker/</guid></item></channel></rss>
