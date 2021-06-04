@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>えやみぐさ</title><link href="https://blog.aoirint.com/" rel="alternate"></link><link href="https://blog.aoirint.com/atom.xml" rel="self"></link><id>https://blog.aoirint.com/</id><updated>2021-06-01T05:00:00+09:00</updated><entry><title>Wiki.jsのセットアップ</title><link href="https://blog.aoirint.com/entry/2021/wikijs/" rel="alternate"></link><published>2021-06-01T05:00:00+09:00</published><updated>2021-06-01T05:00:00+09:00</updated><id>tag:blog.aoirint.com,2021-06-01 05:00:00.000000:/entry/2021/wikijs/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2021_wikijs_index_md_Wiki_jsのセットアップ"&gt;Wiki.jsのセットアップ&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>えやみぐさ</title><link href="https://blog.aoirint.com/" rel="alternate"></link><link href="https://blog.aoirint.com/atom.xml" rel="self"></link><id>https://blog.aoirint.com/</id><updated>2021-06-05T01:30:00+09:00</updated><entry><title>npm startで構文エラーが消えないときの対処</title><link href="https://blog.aoirint.com/entry/2021/npm_start_reset_cache/" rel="alternate"></link><published>2021-06-05T01:30:00+09:00</published><updated>2021-06-05T01:30:00+09:00</updated><id>tag:blog.aoirint.com,2021-06-05 01:30:00.000000:/entry/2021/npm_start_reset_cache/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2021_npm_start_reset_cache_index_md_npm_startで構文エラーが消えないときの対処"&gt;npm startで構文エラーが消えないときの対処&lt;/h1&gt;
+&lt;p&gt;npm startで構文エラーが消えなくなることがある。&lt;/p&gt;
+&lt;p&gt;npm startでサーバを起動してコードの変更を監視したままの状態で、gitでブランチを切り替えたときキャッシュが正しく更新されないことが原因と思われる。&lt;/p&gt;
+&lt;p&gt;キャッシュを破棄するには、&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;npm start -- --reset-cache
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;https://qiita.com/kt3k/items/758c4f3595ffd7e74f9f&lt;/li&gt;
+&lt;/ul&gt;</summary></entry><entry><title>npm startでError: ENOENT: no such file or directory ... .steampathで起動しないときの対処</title><link href="https://blog.aoirint.com/entry/2021/npm_start_enoent_steampath/" rel="alternate"></link><published>2021-06-05T01:30:00+09:00</published><updated>2021-06-05T01:30:00+09:00</updated><id>tag:blog.aoirint.com,2021-06-05 01:30:00.000000:/entry/2021/npm_start_enoent_steampath/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2021_npm_start_enoent_steampath_index_md_npm_startでError_ENOENT_no_such_file_or_directory_steampathで起動しないときの対処"&gt;npm startでError: ENOENT: no such file or directory ... .steampathで起動しないときの対処&lt;/h1&gt;
+&lt;p&gt;gitでブランチを切り替えて依存関係に差分があるとき、
+node_modulesに正しい依存関係がインストールされていないことが
+原因らしい。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Error: ENOENT: no such file or directory, stat '/home/USER/.steampath'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;package-lock.jsonがあれば、
+package-lock.jsonに基づいて依存関係をインストールする&lt;code&gt;n&lt;/code&gt;&lt;/p&gt;</summary></entry><entry><title>Wiki.jsのセットアップ</title><link href="https://blog.aoirint.com/entry/2021/wikijs/" rel="alternate"></link><published>2021-06-01T05:00:00+09:00</published><updated>2021-06-01T05:00:00+09:00</updated><id>tag:blog.aoirint.com,2021-06-01 05:00:00.000000:/entry/2021/wikijs/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2021_wikijs_index_md_Wiki_jsのセットアップ"&gt;Wiki.jsのセットアップ&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://js.wiki/get-started"&gt;https://js.wiki/get-started&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://gigazine.net/news/20201003-wiki-js/"&gt;無料とは思えない多機能っぷりなWikiインフラ「Wiki.js」レビュー、自前でホスト＆外部サービスと連携可能 - GIGAZINE&lt;/a&gt;&lt;/li&gt;
@@ -112,20 +127,4 @@ arduino-cli Version: 0.13.0 Commit: 693a045
         hts-voice-nitech-jp-atr503-m001
 
 &lt;span class="k"&gt;WORKDIR&lt;/span&gt;&lt;span class="s"&gt; /data&lt;/span&gt;
-&lt;span class="k"&gt;ENTRYPOINT&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;"op&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>Ubuntu/Raspberry Pi/Debianの時刻ずれを解消する</title><link href="https://blog.aoirint.com/entry/2021/ubuntu_ntp/" rel="alternate"></link><published>2021-04-04T06:00:00+09:00</published><updated>2021-04-04T06:00:00+09:00</updated><id>tag:blog.aoirint.com,2021-04-04 06:00:00.000000:/entry/2021/ubuntu_ntp/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2021_ubuntu_ntp_index_md_Ubuntu_Raspberry_Pi_Debianの時刻ずれを解消する"&gt;Ubuntu/Raspberry Pi/Debianの時刻ずれを解消する&lt;/h1&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo apt update
-Get:1 http://raspbian.raspberrypi.org/raspbian buster InRelease &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;15&lt;/span&gt;.0 kB&lt;span class="o"&gt;]&lt;/span&gt;
-Get:2 http://archive.raspberrypi.org/debian buster InRelease &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;32&lt;/span&gt;.9 kB&lt;span class="o"&gt;]&lt;/span&gt;
-Reading package lists... Done  
-E: Release file &lt;span class="k"&gt;for&lt;/span&gt; http://raspbian.raspberrypi.org/&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>SSH Port Forwardingを使ってNAT間で通信するPort Proxy Server in Docker</title><link href="https://blog.aoirint.com/entry/2021/ssh_proxy_server_docker/" rel="alternate"></link><published>2021-03-21T03:32:29+09:00</published><updated>2021-03-21T03:32:29+09:00</updated><id>tag:blog.aoirint.com,2021-03-21 03:32:29.000000:/entry/2021/ssh_proxy_server_docker/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2021_ssh_proxy_server_docker_index_md_SSH_Port_Forwardingを使ってNAT間で通信するPort_Proxy_Server_in_Docker"&gt;SSH Port Forwardingを使ってNAT間で通信するPort Proxy Server in Docker&lt;/h1&gt;
-&lt;h2 class="md_header_block" id="h_entry_2021_ssh_proxy_server_docker_index_md_SSHポートフォワーディング_踏み台による中継接続"&gt;SSHポートフォワーディング：踏み台による中継接続&lt;/h2&gt;
-&lt;p&gt;SSHポートフォワーディングには、
-ローカルポートフォワーディング、
-リモートポートフォワーディングの2種類があります。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://qiita.com/mechamogera/items/b1bb9130273deb9426f5"&gt;sshポートフォワーディング - Qiita&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;ローカルポートフォワーディングでは、
-SSHサーバ側から見えるネットワークポートを
-SSHクライアント側に転送することができます。
-例えば、ファイアウォール（NAT）に守られたネットワーク（ネットワークA）&lt;/p&gt;</summary></entry></feed>
+&lt;span class="k"&gt;ENTRYPOINT&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;"op&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary></entry></feed>
