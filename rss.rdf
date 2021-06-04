@@ -8,13 +8,13 @@
 &lt;ul&gt;
 &lt;li&gt;https://qiita.com/kt3k/items/758c4f3595ffd7e74f9f&lt;/li&gt;
 &lt;/ul&gt;</description><pubDate>Sat, 05 Jun 2021 01:30:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-06-05 01:30:00.000000:/entry/2021/npm_start_reset_cache/</guid></item><item><title>npm startでError: ENOENT: no such file or directory ... .steampathで起動しないときの対処</title><link>https://blog.aoirint.com/entry/2021/npm_start_enoent_steampath/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_npm_start_enoent_steampath_index_md_npm_startでError_ENOENT_no_such_file_or_directory_steampathで起動しないときの対処"&gt;npm startでError: ENOENT: no such file or directory ... .steampathで起動しないときの対処&lt;/h1&gt;
-&lt;p&gt;gitでブランチを切り替えて依存関係に差分があるとき、
-node_modulesに正しい依存関係がインストールされていないことが
-原因らしい。&lt;/p&gt;
+&lt;p&gt;gitでブランチを切り替えて依存関係に差分が生じたとき、
+node_modulesを修正していないときに起きる。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Error: ENOENT: no such file or directory, stat '/home/USER/.steampath'
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;package-lock.jsonがあれば、
-package-lock.jsonに基づいて依存関係をインストールする&lt;code&gt;n&lt;/code&gt;&lt;/p&gt;</description><pubDate>Sat, 05 Jun 2021 01:30:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-06-05 01:30:00.000000:/entry/2021/npm_start_enoent_steampath/</guid></item><item><title>Wiki.jsのセットアップ</title><link>https://blog.aoirint.com/entry/2021/wikijs/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_wikijs_index_md_Wiki_jsのセットアップ"&gt;Wiki.jsのセットアップ&lt;/h1&gt;
+package-lock.jsonに基づいて依存関係をインストールする&lt;code&gt;npm ci&lt;/code&gt;を実行する。&lt;/p&gt;
+&lt;p&gt;実行時に&lt;/p&gt;</description><pubDate>Sat, 05 Jun 2021 01:30:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-06-05 01:30:00.000000:/entry/2021/npm_start_enoent_steampath/</guid></item><item><title>Wiki.jsのセットアップ</title><link>https://blog.aoirint.com/entry/2021/wikijs/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_wikijs_index_md_Wiki_jsのセットアップ"&gt;Wiki.jsのセットアップ&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://js.wiki/get-started"&gt;https://js.wiki/get-started&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://gigazine.net/news/20201003-wiki-js/"&gt;無料とは思えない多機能っぷりなWikiインフラ「Wiki.js」レビュー、自前でホスト＆外部サービスと連携可能 - GIGAZINE&lt;/a&gt;&lt;/li&gt;

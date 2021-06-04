@@ -21,8 +21,8 @@
 
 <meta property="og:title" content="npm startでError: ENOENT: no such file or directory ... .steampathで起動しないときの対処 - えやみぐさ" />
 
-<meta name="description" content="npm startでError: ENOENT: no such file or directory ... .steampathで起動しないときの対処 gitでブランチを切り替えて依存関係に差分があるとき、 node_modulesに正しい依存関係がインストールされていないこ"/>
-<meta property="og:description" content="npm startでError: ENOENT: no such file or directory ... .steampathで起動しないときの対処 gitでブランチを切り替えて依存関係に差分があるとき、 node_modulesに正しい依存関係がインストールされていないこ" />
+<meta name="description" content="npm startでError: ENOENT: no such file or directory ... .steampathで起動しないときの対処 gitでブランチを切り替えて依存関係に差分が生じたとき、 node_modulesを修正していないときに起きる。 Error:"/>
+<meta property="og:description" content="npm startでError: ENOENT: no such file or directory ... .steampathで起動しないときの対処 gitでブランチを切り替えて依存関係に差分が生じたとき、 node_modulesを修正していないときに起きる。 Error:" />
 <meta property="og:image" content="https://blog.aoirint.com/ogp.png" />
 <meta property="article:published_time" content="2021-06-05T01:30:00+09:00" />
 
@@ -162,9 +162,8 @@
 
 <div class="article-body">
   <h1 class="md_header_block" id="h_entry_2021_npm_start_enoent_steampath_index_md_npm_startでError_ENOENT_no_such_file_or_directory_steampathで起動しないときの対処">npm startでError: ENOENT: no such file or directory ... .steampathで起動しないときの対処</h1>
-<p>gitでブランチを切り替えて依存関係に差分があるとき、
-node_modulesに正しい依存関係がインストールされていないことが
-原因らしい。</p>
+<p>gitでブランチを切り替えて依存関係に差分が生じたとき、
+node_modulesを修正していないときに起きる。</p>
 <div class="highlight"><pre><span></span><code>Error: ENOENT: no such file or directory, stat '/home/USER/.steampath'
 </code></pre></div>
 <p>package-lock.jsonがあれば、
