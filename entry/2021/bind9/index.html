@@ -206,6 +206,7 @@ IP4.DNS<span class="o">[</span><span class="m">3</span><span class="o">]</span>:
 <li><a href="http://cos.linux-dvr.biz/archives/category/bind-dns%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%A7%8B%E7%AF%89">http://cos.linux-dvr.biz/archives/category/bind-dns%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%A7%8B%E7%AF%89</a></li>
 <li><a href="http://ddns.blog.jp/archives/13568266.html">http://ddns.blog.jp/archives/13568266.html</a></li>
 </ul>
+<h3 class="md_header_block" id="h_entry_2021_bind9_index_md_デフォルト設定ファイル">デフォルト設定ファイル</h3>
 <div class="highlight"><pre><span></span><code>options {
         directory "/var/cache/bind";
 
@@ -232,6 +233,7 @@ IP4.DNS<span class="o">[</span><span class="m">3</span><span class="o">]</span>:
         listen-on-v6 { any; };
 };
 </code></pre></div>
+<h3 class="md_header_block" id="h_entry_2021_bind9_index_md_変更点">変更点</h3>
 <div class="highlight"><pre><span></span><code>forwarders {
         8.8.8.8;
         8.8.4.4;
@@ -241,6 +243,7 @@ IP4.DNS<span class="o">[</span><span class="m">3</span><span class="o">]</span>:
 <ul>
 <li><a href="https://www.isoroot.jp/blog/2929/">https://www.isoroot.jp/blog/2929/</a></li>
 </ul>
+<h3 class="md_header_block" id="h_entry_2021_bind9_index_md_確認">確認</h3>
 <div class="highlight"><pre><span></span><code>server$ systemctl restart bind9.service
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>client$ dig @192.168.x.x aoirint.com
@@ -364,6 +367,21 @@ dev.example.com.        <span class="m">3600</span>    IN  A   <span class="m">1
     <li>
       <a href="#h_entry_2021_bind9_index_md__etc_bind_named_conf_options" class="toc-item toc-item-h2">
         /etc/bind/named.conf.options
+      </a>
+  
+    <li>
+      <a href="#h_entry_2021_bind9_index_md_デフォルト設定ファイル" class="toc-item toc-item-h3">
+        デフォルト設定ファイル
+      </a>
+  
+    <li>
+      <a href="#h_entry_2021_bind9_index_md_変更点" class="toc-item toc-item-h3">
+        変更点
+      </a>
+  
+    <li>
+      <a href="#h_entry_2021_bind9_index_md_確認" class="toc-item toc-item-h3">
+        確認
       </a>
   
     <li>
