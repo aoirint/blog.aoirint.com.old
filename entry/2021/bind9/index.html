@@ -197,6 +197,10 @@ IP4.DNS<span class="o">[</span><span class="m">3</span><span class="o">]</span>:
 ルートサーバ<code>.</code>への非再帰問い合わせにより<code>jp.</code>権威サーバへの委任情報を取得する。
 <code>jp.</code>権威サーバへの非再帰問い合わせにより<code>example.jp.</code>権威サーバへの委任情報を取得する。
 <code>example.jp.</code>権威サーバへの非再帰問い合わせにより<code>hoge.example.jp.</code>のIPアドレスを取得する、のような流れで反復的に問い合わせを行うことで<code>hoge.example.jp.</code>の名前解決を行う。</p>
+<p>ISPの提供するDNSサーバや会社などの組織内DNSサーバ、GoogleやCloudflareなどが提供するパブリックDNSがある。</p>
+<ul>
+<li><a href="https://ascii.jp/elem/000/000/463/463076/">ASCII.jp：DNSによる名前解決の仕組みを理解しよう (1/2)</a></li>
+</ul>
 <h3 class="md_header_block" id="h_entry_2021_bind9_index_md_回送">回送</h3>
 <p>プロキシのように、受け取った名前解決要求を他のDNSサーバに送り、
 応答を返す。</p>
