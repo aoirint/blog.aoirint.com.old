@@ -172,24 +172,26 @@ IP4.DNS<span class="o">[</span><span class="m">2</span><span class="o">]</span>:
 IP4.DNS<span class="o">[</span><span class="m">3</span><span class="o">]</span>:                             <span class="m">1</span>.1.1.1
 </code></pre></div>
 <ul>
-<li><a href="https://askubuntu.com/questions/152593/command-line-to-list-dns-servers-used-by-my-system">https://askubuntu.com/questions/152593/command-line-to-list-dns-servers-used-by-my-system</a></li>
+<li><a href="https://askubuntu.com/questions/152593/command-line-to-list-dns-servers-used-by-my-system">Command-line to list DNS servers used by my system - Ask Ubuntu</a></li>
 </ul>
 <h2 class="md_header_block" id="h_entry_2021_bind9_index_md_用語">用語</h2>
 <ul>
-<li><a href="http://cos.linux-dvr.biz/archives/category/bind-dns%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%A7%8B%E7%AF%89">http://cos.linux-dvr.biz/archives/category/bind-dns%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%A7%8B%E7%AF%89</a></li>
+<li><a href="http://cos.linux-dvr.biz/archives/category/bind-dns%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%A7%8B%E7%AF%89">BIND DNSサーバー構築 | CentOSサーバー構築入門</a></li>
 </ul>
 <h3 class="md_header_block" id="h_entry_2021_bind9_index_md_コンテンツサーバ_権威サーバ_">コンテンツサーバ（権威サーバ）</h3>
 <p>あるゾーン（DNSにおける名前の管理単位）に関する名前解決要求（非再帰問い合わせ）を受け取り、自身が管理するゾーンならば名前解決結果を、委任情報を持つゾーンならば委任先の権威サーバ情報を応答する。</p>
 <p>ルートゾーン（FQDN: <code>.</code>）を管理するルートサーバは、TLD（例えば <code>jp.</code>）の権威サーバへの委任情報を持つ。</p>
+<p>ゾーン情報において、NSレコードにより指定される。</p>
 <ul>
-<li><a href="https://jprs.jp/glossary/index.php?ID=0155">https://jprs.jp/glossary/index.php?ID=0155</a></li>
-<li><a href="https://jprs.jp/glossary/index.php?ID=0145">https://jprs.jp/glossary/index.php?ID=0145</a></li>
+<li><a href="https://jprs.jp/glossary/index.php?ID=0155">JPRS用語辞典｜ルートゾーン</a></li>
+<li><a href="https://jprs.jp/glossary/index.php?ID=0145">JPRS用語辞典｜権威サーバー（権威DNSサーバー）</a></li>
+<li><a href="https://jprs.jp/glossary/index.php?ID=0157">JPRS用語辞典｜ネームサーバー（DNSサーバー）</a></li>
 </ul>
 <h3 class="md_header_block" id="h_entry_2021_bind9_index_md_キャッシュサーバ_フルサービスリゾルバ_">キャッシュサーバ（フルサービスリゾルバ）</h3>
 <p>クライアントから名前解決要求（再帰問い合わせ）を受け取り、
 コンテンツサーバへ反復的に名前解決要求（反復問い合わせ）を送ることで任意のドメイン名の名前解決を行う。</p>
 <ul>
-<li><a href="https://jprs.jp/glossary/index.php?ID=0158">https://jprs.jp/glossary/index.php?ID=0158</a></li>
+<li><a href="https://jprs.jp/glossary/index.php?ID=0158">JPRS用語辞典｜フルサービスリゾルバー（キャッシュDNSサーバー）</a></li>
 </ul>
 <p>例えば<code>hoge.example.jp.</code>というドメインの名前解決要求を受け取ったとき、
 ルートサーバ<code>.</code>への非再帰問い合わせにより<code>jp.</code>権威サーバへの委任情報を取得する。
@@ -202,9 +204,9 @@ IP4.DNS<span class="o">[</span><span class="m">3</span><span class="o">]</span>:
 <p>自身が管理していない情報（ゾーン、委任情報）に関する問い合わせについて、
 他のDNSサーバ（フルサービスリゾルバ）に問い合わせを回送するように設定する。</p>
 <ul>
-<li><a href="https://www.atmarkit.co.jp/ait/articles/1510/28/news013.html">https://www.atmarkit.co.jp/ait/articles/1510/28/news013.html</a></li>
-<li><a href="http://cos.linux-dvr.biz/archives/category/bind-dns%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%A7%8B%E7%AF%89">http://cos.linux-dvr.biz/archives/category/bind-dns%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%A7%8B%E7%AF%89</a></li>
-<li><a href="http://ddns.blog.jp/archives/13568266.html">http://ddns.blog.jp/archives/13568266.html</a></li>
+<li><a href="https://www.atmarkit.co.jp/ait/articles/1510/28/news013.html">「再帰問い合わせ」と「非再帰問い合わせ」の違いを教えてください：DNS Tips - ＠IT</a></li>
+<li><a href="http://cos.linux-dvr.biz/archives/category/bind-dns%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%A7%8B%E7%AF%89">BIND DNSサーバー構築 | CentOSサーバー構築入門</a></li>
+<li><a href="http://ddns.blog.jp/archives/13568266.html">フォワード（回送） : お父さんのためのDNS講座</a></li>
 </ul>
 <h3 class="md_header_block" id="h_entry_2021_bind9_index_md_デフォルト設定ファイル">デフォルト設定ファイル</h3>
 <div class="highlight"><pre><span></span><code>options {
@@ -241,7 +243,7 @@ IP4.DNS<span class="o">[</span><span class="m">3</span><span class="o">]</span>:
 };
 </code></pre></div>
 <ul>
-<li><a href="https://www.isoroot.jp/blog/2929/">https://www.isoroot.jp/blog/2929/</a></li>
+<li><a href="https://www.isoroot.jp/blog/2929/">初歩から解説！BINDでシンプルDNSサーバー構築【構築編】｜ 開発者ブログ ｜ 株式会社アイソルート</a></li>
 </ul>
 <h3 class="md_header_block" id="h_entry_2021_bind9_index_md_確認">確認</h3>
 <div class="highlight"><pre><span></span><code>server$ systemctl restart bind9.service
@@ -256,7 +258,7 @@ aoirint.com.        <span class="m">3600</span>    IN  A   <span class="m">185</
 ...
 </code></pre></div>
 <ul>
-<li><a href="https://qiita.com/hana_shin/items/e99f64a01f2632b7a719">https://qiita.com/hana_shin/items/e99f64a01f2632b7a719</a></li>
+<li><a href="https://qiita.com/hana_shin/items/e99f64a01f2632b7a719">digコマンドの使い方 - Qiita</a></li>
 </ul>
 <h2 class="md_header_block" id="h_entry_2021_bind9_index_md__etc_bind_named_conf_local">/etc/bind/named.conf.local</h2>
 <p>DNSサーバの管理するゾーンの名前と対応する設定ファイル（ゾーンファイル）を設定する。</p>
@@ -315,9 +317,9 @@ dev.example.com.        <span class="m">3600</span>    IN  A   <span class="m">1
 ...
 </code></pre></div>
 <ul>
-<li><a href="https://www.isoroot.jp/blog/2929/">https://www.isoroot.jp/blog/2929/</a></li>
-<li><a href="https://www.atmarkit.co.jp/ait/articles/0306/03/news002_2.html">https://www.atmarkit.co.jp/ait/articles/0306/03/news002_2.html</a></li>
-<li><a href="https://qiita.com/m1220/items/e2093f8f5dc1a6ce9802">https://qiita.com/m1220/items/e2093f8f5dc1a6ce9802</a></li>
+<li><a href="https://www.isoroot.jp/blog/2929/">初歩から解説！BINDでシンプルDNSサーバー構築【構築編】｜ 開発者ブログ ｜ 株式会社アイソルート</a></li>
+<li><a href="https://www.atmarkit.co.jp/ait/articles/0306/03/news002_2.html">サブドメインの運用と委任：実用 BIND 9で作るDNSサーバ（6）（2/3 ページ） - ＠IT</a></li>
+<li><a href="https://qiita.com/m1220/items/e2093f8f5dc1a6ce9802">bind9で内部向けDNS構築　（Ubuntu14.04 Server） - Qiita</a></li>
 </ul>
 </div>
 

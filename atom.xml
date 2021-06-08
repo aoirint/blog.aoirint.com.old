@@ -10,11 +10,13 @@ IP4.DNS&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&
 IP4.DNS&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;:                             &lt;span class="m"&gt;1&lt;/span&gt;.1.1.1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://askubuntu.com/questions/152593/command-line-to-list-dns-servers-used-by-my-system"&gt;https://askubuntu.com/questions/152593/command-line-to-list-dns-servers-used-by-my-system&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://askubuntu.com/questions/152593/command-line-to-list-dns-servers-used-by-my-system"&gt;Command-line to list DNS servers used by my system - Ask Ubuntu&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 class="md_header_block" id="h_entry_2021_bind9_index_md_用語"&gt;用語&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://cos.linux-dvr.biz/archives/category/bind-dns%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%A7%8B%E7%AF%89"&gt;http:/&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary></entry><entry><title>npm startで構文エラーが消えないときの対処</title><link href="https://blog.aoirint.com/entry/2021/npm_start_reset_cache/" rel="alternate"></link><published>2021-06-05T01:30:00+09:00</published><updated>2021-06-05T01:30:00+09:00</updated><id>tag:blog.aoirint.com,2021-06-05 01:30:00.000000:/entry/2021/npm_start_reset_cache/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2021_npm_start_reset_cache_index_md_npm_startで構文エラーが消えないときの対処"&gt;npm startで構文エラーが消えないときの対処&lt;/h1&gt;
+&lt;li&gt;&lt;a href="http://cos.linux-dvr.biz/archives/category/bind-dns%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%A7%8B%E7%AF%89"&gt;BIND DNSサーバー構築 | CentOSサーバー構築入門&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 class="md_header_block" id="h_entry_2021_bind9_index_md_コンテンツサーバ_権威サーバ_"&gt;コンテンツサーバ（権威サーバ）&lt;/h3&gt;</summary></entry><entry><title>npm startで構文エラーが消えないときの対処</title><link href="https://blog.aoirint.com/entry/2021/npm_start_reset_cache/" rel="alternate"></link><published>2021-06-05T01:30:00+09:00</published><updated>2021-06-05T01:30:00+09:00</updated><id>tag:blog.aoirint.com,2021-06-05 01:30:00.000000:/entry/2021/npm_start_reset_cache/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2021_npm_start_reset_cache_index_md_npm_startで構文エラーが消えないときの対処"&gt;npm startで構文エラーが消えないときの対処&lt;/h1&gt;
 &lt;p&gt;npm startで構文エラーが消えなくなることがある。&lt;/p&gt;
 &lt;p&gt;npm startでサーバを起動してコードの変更を監視したままの状態で、gitでブランチを切り替えたときキャッシュが正しく更新されないことが原因と思われる。&lt;/p&gt;
 &lt;p&gt;キャッシュを破棄するには、&lt;/p&gt;
