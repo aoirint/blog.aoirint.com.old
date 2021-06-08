@@ -17,7 +17,7 @@
 
 
 
-<meta property="og:url" content="https://blog.aoirint.com/tags/CI CD/" />
+<meta property="og:url" content="https://blog.aoirint.com/tags/DNS/" />
 <meta property="og:locale" content="ja-JP" />
 <meta property="og:type" content="article" />
 
@@ -141,31 +141,23 @@
 
 <div class="article-metadata">
   <div class="article-date">
-    2021-05-29
+    2021-06-09
   </div>
 
   <div class="article-tags">
 
-    <a href="../../category/GitLab/" class="article-category">
-      GitLab
+    <a href="../../category/DNS/" class="article-category">
+      DNS
     </a>
 
 
-
-    <a href="../GitLab/" class="article-tag">
-      GitLab
-    </a>
-
-    <a href="../GitLab Actions/" class="article-tag">
-      GitLab Actions
-    </a>
 
     <a href="./" class="article-tag">
-      CI CD
+      DNS
     </a>
 
-    <a href="../Docker/" class="article-tag">
-      Docker
+    <a href="../bind9/" class="article-tag">
+      bind9
     </a>
 
   </div>
@@ -174,124 +166,12 @@
 
 
 
-      <h2 class="article-title"><a href="../../entry/2021/gitlab_ci_docker_registry/">GitLab CI, DockerイメージをビルドしてContainer Registryにpushする</a></h2>
+      <h2 class="article-title"><a href="../../entry/2021/bind9/">bind9</a></h2>
 
 
 
       <div class='article-summary'>
-        GitLab CI, DockerイメージをビルドしてContainer Registryにpushする リポジトリ構造 .gitlab-ci.yml app/ Dockerfile .gitlab-ci.yml stages: - build build: stage: build image: docker:20.10 services: - docker:dind rules: - if: $CI_COMMIT_BRANCH == &#34;main&#34; script: - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_P
-      </div>
-
-    </article>
-
-    <hr>
-
-
-
-
-
-    <article class="article">
-      
-
-<div class="article-metadata">
-  <div class="article-date">
-    2020-09-27
-  </div>
-
-  <div class="article-tags">
-
-    <a href="../../category/GitHub/" class="article-category">
-      GitHub
-    </a>
-
-
-
-    <a href="../GitHub/" class="article-tag">
-      GitHub
-    </a>
-
-    <a href="../GitHub Actions/" class="article-tag">
-      GitHub Actions
-    </a>
-
-    <a href="./" class="article-tag">
-      CI CD
-    </a>
-
-  </div>
-
-</div>
-
-
-
-      <h2 class="article-title"><a href="../../entry/2020/github_actions_push_build_results/">GitHub Actions, ビルド結果を別ブランチにpushする</a></h2>
-
-
-
-      <div class='article-summary'>
-        GitHub Actions実行中に生成した`build`ディレクトリの内容を別ブランチにpushする
-      </div>
-
-    </article>
-
-    <hr>
-
-
-
-
-
-    <article class="article">
-      
-
-<div class="article-metadata">
-  <div class="article-date">
-    2020-09-09
-  </div>
-
-  <div class="article-tags">
-
-    <a href="../../category/Blogging/" class="article-category">
-      Blogging
-    </a>
-
-
-
-    <a href="../Blogging/" class="article-tag">
-      Blogging
-    </a>
-
-    <a href="../Miyadaiku/" class="article-tag">
-      Miyadaiku
-    </a>
-
-    <a href="../Static Website/" class="article-tag">
-      Static Website
-    </a>
-
-    <a href="../GitHub/" class="article-tag">
-      GitHub
-    </a>
-
-    <a href="../GitHub Actions/" class="article-tag">
-      GitHub Actions
-    </a>
-
-    <a href="./" class="article-tag">
-      CI CD
-    </a>
-
-  </div>
-
-</div>
-
-
-
-      <h2 class="article-title"><a href="../../entry/2020/miyadaiku_github_actions/">静的サイトジェネレータMiyadaiku + GitHub Actions + GitHub Pagesでブログを作る</a></h2>
-
-
-
-      <div class='article-summary'>
-        静的サイトジェネレータMiyadaikuを使ってブログ環境を整備する
+        bind9 server$ sudo apt install bind9 使用中のDNSサーバの確認 クライアントに設定されているDNSサーバはnmcliコマンドで確認できる。 $ nmcli device show | grep DNS IP4.DNS[1]: 8.8.8.8 IP4.DNS[2]: 8.8.4.4 IP4.DNS[3]: 1.1.1.1 https://askubuntu.com/questions/152593/command-line-to-list-dns-servers-used-by-my-system 用語 http:/
       </div>
 
     </article>
@@ -464,7 +344,7 @@
       </a>
 
     <li>
-      <a href="./" class="tag-item">
+      <a href="../CI CD/" class="tag-item">
         CI CD (3)
       </a>
 
@@ -474,7 +354,7 @@
       </a>
 
     <li>
-      <a href="../DNS/" class="tag-item">
+      <a href="./" class="tag-item">
         DNS (1)
       </a>
 

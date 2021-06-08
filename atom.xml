@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>えやみぐさ</title><link href="https://blog.aoirint.com/" rel="alternate"></link><link href="https://blog.aoirint.com/atom.xml" rel="self"></link><id>https://blog.aoirint.com/</id><updated>2021-06-05T01:30:00+09:00</updated><entry><title>npm startで構文エラーが消えないときの対処</title><link href="https://blog.aoirint.com/entry/2021/npm_start_reset_cache/" rel="alternate"></link><published>2021-06-05T01:30:00+09:00</published><updated>2021-06-05T01:30:00+09:00</updated><id>tag:blog.aoirint.com,2021-06-05 01:30:00.000000:/entry/2021/npm_start_reset_cache/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2021_npm_start_reset_cache_index_md_npm_startで構文エラーが消えないときの対処"&gt;npm startで構文エラーが消えないときの対処&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>えやみぐさ</title><link href="https://blog.aoirint.com/" rel="alternate"></link><link href="https://blog.aoirint.com/atom.xml" rel="self"></link><id>https://blog.aoirint.com/</id><updated>2021-06-09T01:30:00+09:00</updated><entry><title>bind9</title><link href="https://blog.aoirint.com/entry/2021/bind9/" rel="alternate"></link><published>2021-06-09T01:30:00+09:00</published><updated>2021-06-09T01:30:00+09:00</updated><id>tag:blog.aoirint.com,2021-06-09 01:30:00.000000:/entry/2021/bind9/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2021_bind9_index_md_bind9"&gt;bind9&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;server$ sudo apt install bind9
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 class="md_header_block" id="h_entry_2021_bind9_index_md_使用中のDNSサーバの確認"&gt;使用中のDNSサーバの確認&lt;/h2&gt;
+&lt;p&gt;クライアントに設定されているDNSサーバは&lt;code&gt;nmcli&lt;/code&gt;コマンドで確認できる。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ nmcli device show &lt;span class="p"&gt;|&lt;/span&gt; grep DNS
+IP4.DNS&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;:                             &lt;span class="m"&gt;8&lt;/span&gt;.8.8.8
+IP4.DNS&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;:                             &lt;span class="m"&gt;8&lt;/span&gt;.8.4.4
+IP4.DNS&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;:                             &lt;span class="m"&gt;1&lt;/span&gt;.1.1.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://askubuntu.com/questions/152593/command-line-to-list-dns-servers-used-by-my-system"&gt;https://askubuntu.com/questions/152593/command-line-to-list-dns-servers-used-by-my-system&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 class="md_header_block" id="h_entry_2021_bind9_index_md_用語"&gt;用語&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://cos.linux-dvr.biz/archives/category/bind-dns%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%A7%8B%E7%AF%89"&gt;http:/&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary></entry><entry><title>npm startで構文エラーが消えないときの対処</title><link href="https://blog.aoirint.com/entry/2021/npm_start_reset_cache/" rel="alternate"></link><published>2021-06-05T01:30:00+09:00</published><updated>2021-06-05T01:30:00+09:00</updated><id>tag:blog.aoirint.com,2021-06-05 01:30:00.000000:/entry/2021/npm_start_reset_cache/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2021_npm_start_reset_cache_index_md_npm_startで構文エラーが消えないときの対処"&gt;npm startで構文エラーが消えないときの対処&lt;/h1&gt;
 &lt;p&gt;npm startで構文エラーが消えなくなることがある。&lt;/p&gt;
 &lt;p&gt;npm startでサーバを起動してコードの変更を監視したままの状態で、gitでブランチを切り替えたときキャッシュが正しく更新されないことが原因と思われる。&lt;/p&gt;
 &lt;p&gt;キャッシュを破棄するには、&lt;/p&gt;
@@ -112,19 +127,4 @@ arduino-cli Version: 0.13.0 Commit: 693a045
 &lt;/ul&gt;
 &lt;p&gt;&lt;a href="https://arduino.github.io/arduino-cli/latest/"&gt;Arduino CLIの公式ドキュメント&lt;/a&gt;に従ってインストールする。後述する&lt;code&gt;screen&lt;/code&gt;コマンドも合わせてインストールする。
 &lt;code&gt;arduino-cli&lt;/code&gt;はDockerイメージも配布されているのでお好みで。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;curl -fsSL https://raw.githubusercontent&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>Open JTalk in Docker</title><link href="https://blog.aoirint.com/entry/2021/open_jtalk/" rel="alternate"></link><published>2021-04-04T08:00:00+09:00</published><updated>2021-04-04T08:00:00+09:00</updated><id>tag:blog.aoirint.com,2021-04-04 08:00:00.000000:/entry/2021/open_jtalk/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2021_open_jtalk_index_md_Open_JTalk_in_Docker"&gt;Open JTalk in Docker&lt;/h1&gt;
-&lt;p&gt;以前にもOpen JTalkを触っていたが、時間が経った＆記事が雑だったのでDockerでまとめ直しておく。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://aoirint.hatenablog.com/entry/2019/05/25/080329"&gt;Open JTalk - aoirint's note&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Dockerfileを作る。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;FROM&lt;/span&gt; &lt;span class="s"&gt;ubuntu:bionic&lt;/span&gt;
-
-&lt;span class="k"&gt;RUN&lt;/span&gt; apt-get update &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
-    apt-get install -y &lt;span class="se"&gt;\&lt;/span&gt;
-        open-jtalk &lt;span class="se"&gt;\&lt;/span&gt;
-        open-jtalk-mecab-naist-jdic &lt;span class="se"&gt;\&lt;/span&gt;
-        hts-voice-nitech-jp-atr503-m001
-
-&lt;span class="k"&gt;WORKDIR&lt;/span&gt;&lt;span class="s"&gt; /data&lt;/span&gt;
-&lt;span class="k"&gt;ENTRYPOINT&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;"op&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary></entry></feed>
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;curl -fsSL https://raw.githubusercontent&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary></entry></feed>
