@@ -21,11 +21,12 @@ IP4.DNS&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&
 &lt;p&gt;npm startでサーバを起動してコードの変更を監視したままの状態で、gitでブランチを切り替えたときキャッシュが正しく更新されないことが原因と思われる。&lt;/p&gt;
 &lt;p&gt;キャッシュを破棄するには、&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;npm start -- --reset-cache
-npm ci
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;依存関係が変わっているとエラーの原因になるので、モジュールもインストールし直すのがよい。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;npm ci
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://qiita.com/kt3k/items/758c4f3595ffd7e74f9f"&gt;https://qiita.com/kt3k/items/758c4f3595ffd7e74f9f&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><pubDate>Sat, 05 Jun 2021 01:30:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-06-05 01:30:00.000000:/entry/2021/npm_start_reset_cache/</guid></item><item><title>npm startでError: ENOENT: no such file or directory ... .steampathで起動しないときの対処</title><link>https://blog.aoirint.com/entry/2021/npm_start_enoent_steampath/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_npm_start_enoent_steampath_index_md_npm_startでError_ENOENT_no_such_file_or_directory_steampathで起動しないときの対処"&gt;npm startでError: ENOENT: no such file or directory ... .steampathで起動しないときの対処&lt;/h1&gt;
+&lt;li&gt;&lt;a href="https://qiita.com/kt3k/items/758c4f3595ffd7e74f9f"&gt;https://qiita.com/kt3k/items/758c4f3595ffd7&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</description><pubDate>Sat, 05 Jun 2021 01:30:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-06-05 01:30:00.000000:/entry/2021/npm_start_reset_cache/</guid></item><item><title>npm startでError: ENOENT: no such file or directory ... .steampathで起動しないときの対処</title><link>https://blog.aoirint.com/entry/2021/npm_start_enoent_steampath/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_npm_start_enoent_steampath_index_md_npm_startでError_ENOENT_no_such_file_or_directory_steampathで起動しないときの対処"&gt;npm startでError: ENOENT: no such file or directory ... .steampathで起動しないときの対処&lt;/h1&gt;
 &lt;p&gt;gitでブランチを切り替えて依存関係に差分が生じたとき、
 node_modulesを修正していないときに起きる。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Error: ENOENT: no such file or directory, stat '/home/USER/.steampath'

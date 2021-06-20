@@ -166,7 +166,9 @@
 <p>npm startでサーバを起動してコードの変更を監視したままの状態で、gitでブランチを切り替えたときキャッシュが正しく更新されないことが原因と思われる。</p>
 <p>キャッシュを破棄するには、</p>
 <div class="highlight"><pre><span></span><code>npm start -- --reset-cache
-npm ci
+</code></pre></div>
+<p>依存関係が変わっているとエラーの原因になるので、モジュールもインストールし直すのがよい。</p>
+<div class="highlight"><pre><span></span><code>npm ci
 </code></pre></div>
 <ul>
 <li><a href="https://qiita.com/kt3k/items/758c4f3595ffd7e74f9f">https://qiita.com/kt3k/items/758c4f3595ffd7e74f9f</a></li>
