@@ -15,7 +15,7 @@
 
 
 
-<meta property="og:url" content="https://blog.aoirint.com/entry/2021/transproxy/" />
+<meta property="og:url" content="https://blog.aoirint.com/entry/2021/transproxy_ubuntu/" />
 <meta property="og:locale" content="ja-JP" />
 <meta property="og:type" content="article" />
 
@@ -161,24 +161,24 @@
 
 
 <div class="article-body">
-  <h1 class="md_header_block" id="h_entry_2021_transproxy_index_md_透過プロキシ_Ubuntu_go_transproxy_">透過プロキシ（Ubuntu, go-transproxy）</h1>
-<h2 class="md_header_block" id="h_entry_2021_transproxy_index_md__etc_sudoers">/etc/sudoers</h2>
+  <h1 class="md_header_block" id="h_entry_2021_transproxy_ubuntu_index_md_透過プロキシ_Ubuntu_go_transproxy_">透過プロキシ（Ubuntu, go-transproxy）</h1>
+<h2 class="md_header_block" id="h_entry_2021_transproxy_ubuntu_index_md__etc_sudoers">/etc/sudoers</h2>
 <div class="highlight"><pre><span></span><code>Defaults        env_keep+="HTTP_PROXY"
 Defaults        env_keep+="HTTPS_PROXY"
 Defaults        env_keep+="NO_PROXY"
 </code></pre></div>
-<h2 class="md_header_block" id="h_entry_2021_transproxy_index_md_環境変数">環境変数</h2>
+<h2 class="md_header_block" id="h_entry_2021_transproxy_ubuntu_index_md_環境変数">環境変数</h2>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">HTTP_PROXY</span><span class="o">=</span>http://proxy.example.com:8080/
 <span class="nb">export</span> <span class="nv">HTTPS_PROXY</span><span class="o">=</span>http://proxy.example.com:8080/
 <span class="nb">export</span> <span class="nv">NO_PROXY</span><span class="o">=</span>localhost,127.0.0.0/8,::1
 </code></pre></div>
 <p>NO_PROXYには必ずlocalhost/ローカルループバックアドレスを設定しておくこと（無限ループする）。</p>
 <p>デスクトップの場合はGUI設定でOK。</p>
-<h2 class="md_header_block" id="h_entry_2021_transproxy_index_md__usr_local_bin_transproxy">/usr/local/bin/transproxy</h2>
+<h2 class="md_header_block" id="h_entry_2021_transproxy_ubuntu_index_md__usr_local_bin_transproxy">/usr/local/bin/transproxy</h2>
 <ul>
 <li><a href="https://github.com/wadahiro/go-transproxy">https://github.com/wadahiro/go-transproxy</a></li>
 </ul>
-<h2 class="md_header_block" id="h_entry_2021_transproxy_index_md__usr_local_bin_transproxy_start">/usr/local/bin/transproxy-start</h2>
+<h2 class="md_header_block" id="h_entry_2021_transproxy_ubuntu_index_md__usr_local_bin_transproxy_start">/usr/local/bin/transproxy-start</h2>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
 <span class="nb">set</span> -eu
@@ -190,7 +190,7 @@ iptables -t nat -I OUTPUT -p tcp --dport <span class="m">443</span> -j REDIRECT 
 
 transproxy -disable-iptables <span class="c1"># -dns-over-https-enabled</span>
 </code></pre></div>
-<h2 class="md_header_block" id="h_entry_2021_transproxy_index_md__usr_local_bin_transproxy_stop">/usr/local/bin/transproxy-stop</h2>
+<h2 class="md_header_block" id="h_entry_2021_transproxy_ubuntu_index_md__usr_local_bin_transproxy_stop">/usr/local/bin/transproxy-stop</h2>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
 <span class="nb">set</span> -eu
@@ -203,7 +203,7 @@ iptables -t nat -D OUTPUT -p tcp --dport <span class="m">80</span> -j REDIRECT -
 <p>iptablesのルールを書き換えるため、実行時にはroot権限が必要。</p>
 <p>sudoで実行すれば、/etc/sudoersの設定から現在のシェルの環境変数が引き継がれる（-Eオプションでもいいが）。</p>
 <p>transproxyは内部で環境変数からプロキシ設定を読み出し、透過プロキシサーバを立てる。</p>
-<h2 class="md_header_block" id="h_entry_2021_transproxy_index_md_自動起動設定_etc_systemd_system_transproxy_service">自動起動設定 /etc/systemd/system/transproxy.service</h2>
+<h2 class="md_header_block" id="h_entry_2021_transproxy_ubuntu_index_md_自動起動設定_etc_systemd_system_transproxy_service">自動起動設定 /etc/systemd/system/transproxy.service</h2>
 <p>常時プロキシに接続する端末ではOS起動時に実行されるようにしておくと便利。</p>
 <div class="highlight"><pre><span></span><code>[Unit]
 Description=transproxy
@@ -237,37 +237,37 @@ WantedBy=multi-user.target
   <ul class="toc">
   
     <li>
-      <a href="#h_entry_2021_transproxy_index_md_透過プロキシ_Ubuntu_go_transproxy_" class="toc-item toc-item-h1">
+      <a href="#h_entry_2021_transproxy_ubuntu_index_md_透過プロキシ_Ubuntu_go_transproxy_" class="toc-item toc-item-h1">
         透過プロキシ（Ubuntu, go-transproxy）
       </a>
   
     <li>
-      <a href="#h_entry_2021_transproxy_index_md__etc_sudoers" class="toc-item toc-item-h2">
+      <a href="#h_entry_2021_transproxy_ubuntu_index_md__etc_sudoers" class="toc-item toc-item-h2">
         /etc/sudoers
       </a>
   
     <li>
-      <a href="#h_entry_2021_transproxy_index_md_環境変数" class="toc-item toc-item-h2">
+      <a href="#h_entry_2021_transproxy_ubuntu_index_md_環境変数" class="toc-item toc-item-h2">
         環境変数
       </a>
   
     <li>
-      <a href="#h_entry_2021_transproxy_index_md__usr_local_bin_transproxy" class="toc-item toc-item-h2">
+      <a href="#h_entry_2021_transproxy_ubuntu_index_md__usr_local_bin_transproxy" class="toc-item toc-item-h2">
         /usr/local/bin/transproxy
       </a>
   
     <li>
-      <a href="#h_entry_2021_transproxy_index_md__usr_local_bin_transproxy_start" class="toc-item toc-item-h2">
+      <a href="#h_entry_2021_transproxy_ubuntu_index_md__usr_local_bin_transproxy_start" class="toc-item toc-item-h2">
         /usr/local/bin/transproxy-start
       </a>
   
     <li>
-      <a href="#h_entry_2021_transproxy_index_md__usr_local_bin_transproxy_stop" class="toc-item toc-item-h2">
+      <a href="#h_entry_2021_transproxy_ubuntu_index_md__usr_local_bin_transproxy_stop" class="toc-item toc-item-h2">
         /usr/local/bin/transproxy-stop
       </a>
   
     <li>
-      <a href="#h_entry_2021_transproxy_index_md_自動起動設定_etc_systemd_system_transproxy_service" class="toc-item toc-item-h2">
+      <a href="#h_entry_2021_transproxy_ubuntu_index_md_自動起動設定_etc_systemd_system_transproxy_service" class="toc-item toc-item-h2">
         自動起動設定 /etc/systemd/system/transproxy.service
       </a>
   

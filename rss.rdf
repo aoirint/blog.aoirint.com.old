@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>えやみぐさ</title><link>https://blog.aoirint.com/</link><description></description><lastBuildDate>Mon, 21 Jun 2021 18:10:00 +0900</lastBuildDate><item><title>透過プロキシ（Ubuntu, go-transproxy）</title><link>https://blog.aoirint.com/entry/2021/transproxy/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_transproxy_index_md_透過プロキシ_Ubuntu_go_transproxy_"&gt;透過プロキシ（Ubuntu, go-transproxy）&lt;/h1&gt;
-&lt;h2 class="md_header_block" id="h_entry_2021_transproxy_index_md__etc_sudoers"&gt;/etc/sudoers&lt;/h2&gt;
+<rss version="2.0"><channel><title>えやみぐさ</title><link>https://blog.aoirint.com/</link><description></description><lastBuildDate>Mon, 21 Jun 2021 18:10:00 +0900</lastBuildDate><item><title>透過プロキシ（Ubuntu, go-transproxy）</title><link>https://blog.aoirint.com/entry/2021/transproxy_ubuntu/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_transproxy_ubuntu_index_md_透過プロキシ_Ubuntu_go_transproxy_"&gt;透過プロキシ（Ubuntu, go-transproxy）&lt;/h1&gt;
+&lt;h2 class="md_header_block" id="h_entry_2021_transproxy_ubuntu_index_md__etc_sudoers"&gt;/etc/sudoers&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Defaults        env_keep+="HTTP_PROXY"
 Defaults        env_keep+="HTTPS_PROXY"
 Defaults        env_keep+="NO_PROXY"
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 class="md_header_block" id="h_entry_2021_transproxy_index_md_環境変数"&gt;環境変数&lt;/h2&gt;
+&lt;h2 class="md_header_block" id="h_entry_2021_transproxy_ubuntu_index_md_環境変数"&gt;環境変数&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;HTTP_PROXY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;http://proxy.example.com:8080/
 &lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;HTTPS_PROXY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;http://proxy.example.com:8080/
-&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;NO_PROXY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;localhost,127&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><pubDate>Mon, 21 Jun 2021 18:10:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-06-21 18:10:00.000000:/entry/2021/transproxy/</guid></item><item><title>bind9</title><link>https://blog.aoirint.com/entry/2021/bind9/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_bind9_index_md_bind9"&gt;bind9&lt;/h1&gt;
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;NO_PROXY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;localhost,127&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><pubDate>Mon, 21 Jun 2021 18:10:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-06-21 18:10:00.000000:/entry/2021/transproxy_ubuntu/</guid></item><item><title>bind9</title><link>https://blog.aoirint.com/entry/2021/bind9/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_bind9_index_md_bind9"&gt;bind9&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;server$ sudo apt install bind9
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 class="md_header_block" id="h_entry_2021_bind9_index_md_使用中のDNSサーバの確認"&gt;使用中のDNSサーバの確認&lt;/h2&gt;
