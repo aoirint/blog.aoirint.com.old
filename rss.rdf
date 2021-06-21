@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0"><channel><title>えやみぐさ</title><link>https://blog.aoirint.com/</link><description></description><lastBuildDate>Mon, 21 Jun 2021 18:40:00 +0900</lastBuildDate><item><title>透過プロキシ（macOS, go-transproxy）</title><link>https://blog.aoirint.com/entry/2021/transproxy_macos/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_transproxy_macos_index_md_透過プロキシ_macOS_"&gt;透過プロキシ（macOS）&lt;/h1&gt;
 &lt;h2 class="md_header_block" id="h_entry_2021_transproxy_macos_index_md_環境変数"&gt;環境変数&lt;/h2&gt;
-&lt;p&gt;GUIで設定すればOK。&lt;/p&gt;
+&lt;p&gt;シェル起動時にネットワーク設定からプロキシ設定を環境変数に読み出すようにしている場合、GUIで設定すればOK。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;HTTP_PROXY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;http://proxy.example.com:8080/
 &lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;HTTPS_PROXY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;http://proxy.example.com:8080/
 &lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;NO_PROXY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;localhost,127.0.0.0/8,::1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;NO_PROXYには必ずlocalhost/ローカルループバックアドレスを設定しておくこと（無限ループする）。&lt;/p&gt;
-&lt;h2 class="md_header_block" id="h_entry_2021_transproxy_macos_index_md_ビルド"&gt;ビルド&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/wadahiro/go-transproxy"&gt;https://github.com/wadahiro/go-tra&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</description><pubDate>Mon, 21 Jun 2021 18:40:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-06-21 18:40:00.000000:/entry/2021/transproxy_macos/</guid></item><item><title>透過プロキシ（Ubuntu, go-transproxy）</title><link>https://blog.aoirint.com/entry/2021/transproxy_ubuntu/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_transproxy_ubuntu_index_md_透過プロキシ_Ubuntu_go_transproxy_"&gt;透過プロキシ（Ubuntu, go-transproxy）&lt;/h1&gt;
+&lt;p&gt;NO_PROXYには必ずlocalhost/ローカルループバックアドレスを設定しておくこと（無限ル&lt;/p&gt;</description><pubDate>Mon, 21 Jun 2021 18:40:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-06-21 18:40:00.000000:/entry/2021/transproxy_macos/</guid></item><item><title>透過プロキシ（Ubuntu, go-transproxy）</title><link>https://blog.aoirint.com/entry/2021/transproxy_ubuntu/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_transproxy_ubuntu_index_md_透過プロキシ_Ubuntu_go_transproxy_"&gt;透過プロキシ（Ubuntu, go-transproxy）&lt;/h1&gt;
 &lt;h2 class="md_header_block" id="h_entry_2021_transproxy_ubuntu_index_md__etc_sudoers"&gt;/etc/sudoers&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Defaults        env_keep+="HTTP_PROXY"
 Defaults        env_keep+="HTTPS_PROXY"
