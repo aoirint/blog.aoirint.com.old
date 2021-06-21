@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>えやみぐさ</title><link href="https://blog.aoirint.com/" rel="alternate"></link><link href="https://blog.aoirint.com/atom.xml" rel="self"></link><id>https://blog.aoirint.com/</id><updated>2021-06-09T01:30:00+09:00</updated><entry><title>bind9</title><link href="https://blog.aoirint.com/entry/2021/bind9/" rel="alternate"></link><published>2021-06-09T01:30:00+09:00</published><updated>2021-06-09T01:30:00+09:00</updated><id>tag:blog.aoirint.com,2021-06-09 01:30:00.000000:/entry/2021/bind9/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2021_bind9_index_md_bind9"&gt;bind9&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>えやみぐさ</title><link href="https://blog.aoirint.com/" rel="alternate"></link><link href="https://blog.aoirint.com/atom.xml" rel="self"></link><id>https://blog.aoirint.com/</id><updated>2021-06-21T18:10:00+09:00</updated><entry><title>透過プロキシ（Ubuntu, go-transproxy）</title><link href="https://blog.aoirint.com/entry/2021/transproxy/" rel="alternate"></link><published>2021-06-21T18:10:00+09:00</published><updated>2021-06-21T18:10:00+09:00</updated><id>tag:blog.aoirint.com,2021-06-21 18:10:00.000000:/entry/2021/transproxy/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2021_transproxy_index_md_透過プロキシ_Ubuntu_go_transproxy_"&gt;透過プロキシ（Ubuntu, go-transproxy）&lt;/h1&gt;
+&lt;h2 class="md_header_block" id="h_entry_2021_transproxy_index_md__etc_sudoers"&gt;/etc/sudoers&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Defaults        env_keep+="HTTP_PROXY"
+Defaults        env_keep+="HTTPS_PROXY"
+Defaults        env_keep+="NO_PROXY"
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 class="md_header_block" id="h_entry_2021_transproxy_index_md_環境変数"&gt;環境変数&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;HTTP_PROXY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;http://proxy.example.com:8080/
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;HTTPS_PROXY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;http://proxy.example.com:8080/
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;NO_PROXY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;localhost,127&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>bind9</title><link href="https://blog.aoirint.com/entry/2021/bind9/" rel="alternate"></link><published>2021-06-09T01:30:00+09:00</published><updated>2021-06-09T01:30:00+09:00</updated><id>tag:blog.aoirint.com,2021-06-09 01:30:00.000000:/entry/2021/bind9/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2021_bind9_index_md_bind9"&gt;bind9&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;server$ sudo apt install bind9
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 class="md_header_block" id="h_entry_2021_bind9_index_md_使用中のDNSサーバの確認"&gt;使用中のDNSサーバの確認&lt;/h2&gt;
@@ -120,15 +129,4 @@ Atomからこれを利用できるようにする。&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;PDFプレビュー&lt;ul&gt;
-&lt;li&gt;&lt;a href=""&gt;pdf-view&lt;/a&gt;（メモリリーク? Atomを一度閉じれば解消&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</summary></entry><entry><title>arduino-cliの使い方</title><link href="https://blog.aoirint.com/entry/2020/arduino_cli_usage/" rel="alternate"></link><published>2020-11-09T08:00:00+09:00</published><updated>2021-05-09T17:30:00+09:00</updated><id>tag:blog.aoirint.com,2020-11-09 08:00:00.000000:/entry/2020/arduino_cli_usage/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2020_arduino_cli_usage_index_md_arduino_cliの使い方"&gt;arduino-cliの使い方&lt;/h1&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ arduino-cli version
-arduino-cli Version: 0.13.0 Commit: 693a045
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 class="md_header_block" id="h_entry_2020_arduino_cli_usage_index_md_インストール"&gt;インストール&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://arduino.github.io/arduino-cli/latest/installation/"&gt;Installation - Arduino CLI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://hub.docker.com/r/arduino/arduino-cli"&gt;arduino/arduino-cli&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href="https://arduino.github.io/arduino-cli/latest/"&gt;Arduino CLIの公式ドキュメント&lt;/a&gt;に従ってインストールする。後述する&lt;code&gt;screen&lt;/code&gt;コマンドも合わせてインストールする。
-&lt;code&gt;arduino-cli&lt;/code&gt;はDockerイメージも配布されているのでお好みで。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;curl -fsSL https://raw.githubusercontent&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary></entry></feed>
+&lt;li&gt;&lt;a href=""&gt;pdf-view&lt;/a&gt;（メモリリーク? Atomを一度閉じれば解消&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</summary></entry></feed>
