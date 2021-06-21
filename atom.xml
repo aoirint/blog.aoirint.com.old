@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>えやみぐさ</title><link href="https://blog.aoirint.com/" rel="alternate"></link><link href="https://blog.aoirint.com/atom.xml" rel="self"></link><id>https://blog.aoirint.com/</id><updated>2021-06-21T18:10:00+09:00</updated><entry><title>透過プロキシ（Ubuntu, go-transproxy）</title><link href="https://blog.aoirint.com/entry/2021/transproxy_ubuntu/" rel="alternate"></link><published>2021-06-21T18:10:00+09:00</published><updated>2021-06-21T18:10:00+09:00</updated><id>tag:blog.aoirint.com,2021-06-21 18:10:00.000000:/entry/2021/transproxy_ubuntu/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2021_transproxy_ubuntu_index_md_透過プロキシ_Ubuntu_go_transproxy_"&gt;透過プロキシ（Ubuntu, go-transproxy）&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>えやみぐさ</title><link href="https://blog.aoirint.com/" rel="alternate"></link><link href="https://blog.aoirint.com/atom.xml" rel="self"></link><id>https://blog.aoirint.com/</id><updated>2021-06-21T18:40:00+09:00</updated><entry><title>透過プロキシ（macOS, go-transproxy）</title><link href="https://blog.aoirint.com/entry/2021/transproxy_macos/" rel="alternate"></link><published>2021-06-21T18:40:00+09:00</published><updated>2021-06-21T18:40:00+09:00</updated><id>tag:blog.aoirint.com,2021-06-21 18:40:00.000000:/entry/2021/transproxy_macos/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2021_transproxy_macos_index_md_透過プロキシ_macOS_"&gt;透過プロキシ（macOS）&lt;/h1&gt;
+&lt;h2 class="md_header_block" id="h_entry_2021_transproxy_macos_index_md_環境変数"&gt;環境変数&lt;/h2&gt;
+&lt;p&gt;GUIで設定すればOK。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;HTTP_PROXY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;http://proxy.example.com:8080/
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;HTTPS_PROXY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;http://proxy.example.com:8080/
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;NO_PROXY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;localhost,127.0.0.0/8,::1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;NO_PROXYには必ずlocalhost/ローカルループバックアドレスを設定しておくこと（無限ループする）。&lt;/p&gt;
+&lt;h2 class="md_header_block" id="h_entry_2021_transproxy_macos_index_md_ビルド"&gt;ビルド&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/wadahiro/go-transproxy"&gt;https://github.com/wadahiro/go-tra&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary></entry><entry><title>透過プロキシ（Ubuntu, go-transproxy）</title><link href="https://blog.aoirint.com/entry/2021/transproxy_ubuntu/" rel="alternate"></link><published>2021-06-21T18:10:00+09:00</published><updated>2021-06-21T18:10:00+09:00</updated><id>tag:blog.aoirint.com,2021-06-21 18:10:00.000000:/entry/2021/transproxy_ubuntu/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2021_transproxy_ubuntu_index_md_透過プロキシ_Ubuntu_go_transproxy_"&gt;透過プロキシ（Ubuntu, go-transproxy）&lt;/h1&gt;
 &lt;h2 class="md_header_block" id="h_entry_2021_transproxy_ubuntu_index_md__etc_sudoers"&gt;/etc/sudoers&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Defaults        env_keep+="HTTP_PROXY"
 Defaults        env_keep+="HTTPS_PROXY"
@@ -102,31 +112,4 @@ e225b6b77209   wikijs_wiki_1   &lt;span class="m"&gt;0&lt;/span&gt;.01%     &lt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-linux"&gt;https://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-linux&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey &lt;span class="p"&gt;|&lt;/span&gt; sudo&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>Atom + LaTeX in Docker</title><link href="https://blog.aoirint.com/entry/2020/atom_latex_docker/" rel="alternate"></link><published>2020-09-17T08:35:00+09:00</published><updated>2021-05-14T01:00:00+09:00</updated><id>tag:blog.aoirint.com,2020-09-17 08:35:00.000000:/entry/2020/atom_latex_docker/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2020_atom_latex_docker_index_md_Atom_LaTeX_in_Docker"&gt;Atom + LaTeX in Docker&lt;/h1&gt;
-&lt;h2 class="md_header_block" id="h_entry_2020_atom_latex_docker_index_md_概要"&gt;概要&lt;/h2&gt;
-&lt;p&gt;LaTeXをホストにインストールせず、Docker内で動かしつつ、
-Atomからこれを利用できるようにする。&lt;/p&gt;
-&lt;h2 class="md_header_block" id="h_entry_2020_atom_latex_docker_index_md_Requirements"&gt;Requirements&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Ubuntu 18.04&lt;/li&gt;
-&lt;li&gt;Docker&lt;/li&gt;
-&lt;li&gt;Atom&lt;/li&gt;
-&lt;li&gt;Atom Packages&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://atom.io/packages/latex"&gt;latex&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 class="md_header_block" id="h_entry_2020_atom_latex_docker_index_md_Atom_Packages"&gt;Atom Packages&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://atom.io/packages/latex"&gt;latex&lt;/a&gt;を入れれば最低限ビルドコマンドは叩けるようになる。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://atom.io/packages/latex"&gt;latex&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;シンタックスハイライト&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://atom.io/packages/language-latex"&gt;language-latex&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;アウトライン表示&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://atom.io/packages/document-outline"&gt;document-outline&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;PDFプレビュー&lt;ul&gt;
-&lt;li&gt;&lt;a href=""&gt;pdf-view&lt;/a&gt;（メモリリーク? Atomを一度閉じれば解消&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</summary></entry></feed>
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey &lt;span class="p"&gt;|&lt;/span&gt; sudo&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary></entry></feed>
