@@ -12,7 +12,13 @@
     -fail_command a b c
     ls
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 class="md_header_block" id="h_entry_2021_makefile_tips_index_md_インデントはスペースではなくタブを使う"&gt;インデント&lt;/h2&gt;</description><pubDate>Thu, 01 Jul 2021 13:00:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-07-01 13:00:00.000000:/entry/2021/makefile_tips/</guid></item><item><title>Atom Text Editor Setup</title><link>https://blog.aoirint.com/entry/2021/atom_setup/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_atom_setup_index_md_Atom_Text_Editor_Setup"&gt;Atom Text Editor Setup&lt;/h1&gt;
+&lt;h2 class="md_header_block" id="h_entry_2021_makefile_tips_index_md_インデントはスペースではなくタブを使う"&gt;インデント&lt;/h2&gt;</description><pubDate>Thu, 01 Jul 2021 13:00:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-07-01 13:00:00.000000:/entry/2021/makefile_tips/</guid></item><item><title>GoogleサービスのURLでユーザアカウントを指定する（?authuser=email）</title><link>https://blog.aoirint.com/entry/2021/google_authuser_link/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_google_authuser_link_index_md_GoogleサービスのURLでユーザアカウントを指定する"&gt;GoogleサービスのURLでユーザアカウントを指定する&lt;/h1&gt;
+&lt;p&gt;Googleサービスでは、URL中の&lt;code&gt;/u/0/&lt;/code&gt;や&lt;code&gt;/u/1/&lt;/code&gt;の数値部分を書き換えることで、ログイン順に基づいてユーザの切り替えができる。しかし、ログイン順の異なる端末間でURLをブックマークしたい場合などに不便である。&lt;/p&gt;
+&lt;p&gt;メールアドレスを指定してユーザを切り替えるには、
+URLのGETパラメータに&lt;code&gt;authuser=mail@example.com&lt;/code&gt;のようにGoogleアカウントのメールアドレスを記述する。&lt;/p&gt;
+&lt;h2 class="md_header_block" id="h_entry_2021_google_authuser_link_index_md_Google_Classroom"&gt;Google Classroom&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;https://classr&lt;/li&gt;&lt;/ul&gt;</description><pubDate>Thu, 01 Jul 2021 13:00:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-07-01 13:00:00.000000:/entry/2021/google_authuser_link/</guid></item><item><title>Atom Text Editor Setup</title><link>https://blog.aoirint.com/entry/2021/atom_setup/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_atom_setup_index_md_Atom_Text_Editor_Setup"&gt;Atom Text Editor Setup&lt;/h1&gt;
 &lt;p&gt;GitHubが開発するElectron製高機能テキストエディタAtomをセットアップする。&lt;/p&gt;
 &lt;h2 class="md_header_block" id="h_entry_2021_atom_setup_index_md_Installation"&gt;Installation&lt;/h2&gt;
 &lt;h3 class="md_header_block" id="h_entry_2021_atom_setup_index_md_macOS_Windows"&gt;macOS, Windows&lt;/h3&gt;
@@ -90,25 +96,4 @@ package-lock.jsonに基づいて依存関係をインストールする&lt;code&
 &lt;h2 class="md_header_block" id="h_entry_2021_wikijs_index_md_メモリ消費量"&gt;メモリ消費量&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ docker stats
 CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O         PIDS
-e225b6b77209   wikijs_wiki_1   &lt;span class="m"&gt;0&lt;/span&gt;.01%     &lt;span class="m"&gt;127&lt;/span&gt;.6MiB / &lt;span class="m"&gt;7&lt;/span&gt;.681GiB   &lt;span class="m"&gt;1&lt;/span&gt;.62%     &lt;span class="m"&gt;13&lt;/span&gt;.1MB / &lt;span class="m"&gt;22&lt;/span&gt;.7MB   &lt;span class="m"&gt;44&lt;/span&gt;.5MB / &lt;span class="m"&gt;1&lt;/span&gt;.45MB&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><pubDate>Tue, 01 Jun 2021 05:00:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-06-01 05:00:00.000000:/entry/2021/wikijs/</guid></item><item><title>GitLab CI, DockerイメージをビルドしてContainer Registryにpushする</title><link>https://blog.aoirint.com/entry/2021/gitlab_ci_docker_registry/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_gitlab_ci_docker_registry_index_md_GitLab_CI_DockerイメージをビルドしてContainer_Registryにpushする"&gt;GitLab CI, DockerイメージをビルドしてContainer Registryにpushする&lt;/h1&gt;
-&lt;h2 class="md_header_block" id="h_entry_2021_gitlab_ci_docker_registry_index_md_リポジトリ構造"&gt;リポジトリ構造&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;.gitlab-ci.yml&lt;/li&gt;
-&lt;li&gt;app/&lt;ul&gt;
-&lt;li&gt;Dockerfile&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 class="md_header_block" id="h_entry_2021_gitlab_ci_docker_registry_index_md__gitlab_ci_yml"&gt;.gitlab-ci.yml&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;stages&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;build&lt;/span&gt;
-
-&lt;span class="nt"&gt;build&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-  &lt;span class="nt"&gt;stage&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;build&lt;/span&gt;
-  &lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;docker:20.10&lt;/span&gt;
-  &lt;span class="nt"&gt;services&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;docker:dind&lt;/span&gt;
-  &lt;span class="nt"&gt;rules&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;if&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;$CI_COMMIT_BRANCH == "main"&lt;/span&gt;
-  &lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_P&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><pubDate>Sat, 29 May 2021 02:00:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-05-29 02:00:00.000000:/entry/2021/gitlab_ci_docker_registry/</guid></item></channel></rss>
+e225b6b77209   wikijs_wiki_1   &lt;span class="m"&gt;0&lt;/span&gt;.01%     &lt;span class="m"&gt;127&lt;/span&gt;.6MiB / &lt;span class="m"&gt;7&lt;/span&gt;.681GiB   &lt;span class="m"&gt;1&lt;/span&gt;.62%     &lt;span class="m"&gt;13&lt;/span&gt;.1MB / &lt;span class="m"&gt;22&lt;/span&gt;.7MB   &lt;span class="m"&gt;44&lt;/span&gt;.5MB / &lt;span class="m"&gt;1&lt;/span&gt;.45MB&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><pubDate>Tue, 01 Jun 2021 05:00:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-06-01 05:00:00.000000:/entry/2021/wikijs/</guid></item></channel></rss>
