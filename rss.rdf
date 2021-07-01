@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>えやみぐさ</title><link>https://blog.aoirint.com/</link><description></description><lastBuildDate>Sun, 27 Jun 2021 17:00:00 +0900</lastBuildDate><item><title>Atom Text Editor Setup</title><link>https://blog.aoirint.com/entry/2021/atom_setup/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_atom_setup_index_md_Atom_Text_Editor_Setup"&gt;Atom Text Editor Setup&lt;/h1&gt;
+<rss version="2.0"><channel><title>えやみぐさ</title><link>https://blog.aoirint.com/</link><description></description><lastBuildDate>Thu, 01 Jul 2021 13:00:00 +0900</lastBuildDate><item><title>Makefile Tips</title><link>https://blog.aoirint.com/entry/2021/makefile_tips/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_makefile_tips_index_md_Makefile_Tips"&gt;Makefile Tips&lt;/h1&gt;
+&lt;h2 class="md_header_block" id="h_entry_2021_makefile_tips_index_md_Makefileのあるディレクトリの絶対パスを取得する"&gt;Makefileのあるディレクトリの絶対パスを取得する&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;$(pwd)&lt;/code&gt;や相対パスでは、&lt;code&gt;make&lt;/code&gt;コマンドの実行ディレクトリが基準になってしまう。&lt;code&gt;Makefile&lt;/code&gt;の実体があるディレクトリを基準としたいときは、以下のようにROOT_DIRを定義する。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nv"&gt;ROOT_DIR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;dir &lt;span class="k"&gt;$(&lt;/span&gt;realpath &lt;span class="k"&gt;$(&lt;/span&gt;firstword &lt;span class="k"&gt;$(&lt;/span&gt;MAKEFILE_LIST&lt;span class="k"&gt;))))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 class="md_header_block" id="h_entry_2021_makefile_tips_index_md_エラー時に処理を続行する"&gt;エラー時に処理を続行する&lt;/h2&gt;
+&lt;p&gt;コマンドの前に&lt;code&gt;-&lt;/code&gt;（ハイフン）をつける。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nf"&gt;.PHONY&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;cmd&lt;/span&gt;
+&lt;span class="nf"&gt;cmd&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    ls
+    -fail_command a b c
+    ls
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 class="md_header_block" id="h_entry_2021_makefile_tips_index_md_インデントはスペースではなくタブを使う"&gt;インデント&lt;/h2&gt;</description><pubDate>Thu, 01 Jul 2021 13:00:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-07-01 13:00:00.000000:/entry/2021/makefile_tips/</guid></item><item><title>Atom Text Editor Setup</title><link>https://blog.aoirint.com/entry/2021/atom_setup/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_atom_setup_index_md_Atom_Text_Editor_Setup"&gt;Atom Text Editor Setup&lt;/h1&gt;
 &lt;p&gt;GitHubが開発するElectron製高機能テキストエディタAtomをセットアップする。&lt;/p&gt;
 &lt;h2 class="md_header_block" id="h_entry_2021_atom_setup_index_md_Installation"&gt;Installation&lt;/h2&gt;
 &lt;h3 class="md_header_block" id="h_entry_2021_atom_setup_index_md_macOS_Windows"&gt;macOS, Windows&lt;/h3&gt;
@@ -98,18 +111,4 @@ e225b6b77209   wikijs_wiki_1   &lt;span class="m"&gt;0&lt;/span&gt;.01%     &lt;
   &lt;span class="nt"&gt;rules&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;if&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;$CI_COMMIT_BRANCH == "main"&lt;/span&gt;
   &lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_P&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><pubDate>Sat, 29 May 2021 02:00:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-05-29 02:00:00.000000:/entry/2021/gitlab_ci_docker_registry/</guid></item><item><title>ロータリエンコーダ付きステッピングモータをArduinoで制御して角度を取得する</title><link>https://blog.aoirint.com/entry/2020/stepping_motor/</link><description>&lt;h1 class="md_header_block" id="h_entry_2020_stepping_motor_index_md_ロータリエンコーダ付きステッピングモータをArduinoで制御して角度を取得する"&gt;ロータリエンコーダ付きステッピングモータをArduinoで制御して角度を取得する&lt;/h1&gt;
-&lt;h2 class="md_header_block" id="h_entry_2020_stepping_motor_index_md_機材"&gt;機材&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Arduino UNO（中華）&lt;/li&gt;
-&lt;li&gt;ロータリエンコーダ付きステッピングモータ&lt;ul&gt;
-&lt;li&gt;PKP214U06A-R2EL&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.orientalmotor.co.jp/products/detail.action?hinmei=PKP214U06A-R2EL-L"&gt;PKP214U06A-R2EL-L｜PKPシリーズ／PKシリーズ｜ステッピングモーター｜オリエンタルモーター株式会社&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;モータ部説明書（PDF、HM-7433J.pdf）&lt;/li&gt;
-&lt;li&gt;ロータリエンコーダ部説明書（PDF、HM-7439JE.pdf）&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.orientalmotor.co.jp/file_addon/products/st/image/tj_pkp214u06a-r2el-l_d.gif"&gt;特性図（画像）&lt;/a&gt;（DC24V駆動時）&lt;/li&gt;
-&lt;li&gt;モータ部&lt;ul&gt;
-&lt;li&gt;2相&lt;/li&gt;
-&lt;li&gt;ユニポーラ5本リード線&lt;/li&gt;
-&lt;li&gt;基本ステップ角度1.8°&lt;/li&gt;
-&lt;li&gt;AC 50&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description><pubDate>Tue, 06 Oct 2020 07:00:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2020-10-06 07:00:00.000000:/entry/2020/stepping_motor/</guid></item></channel></rss>
+    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_P&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><pubDate>Sat, 29 May 2021 02:00:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-05-29 02:00:00.000000:/entry/2021/gitlab_ci_docker_registry/</guid></item></channel></rss>
