@@ -183,12 +183,12 @@
 <div class="highlight"><pre><span></span><code><span class="p">:</span><span class="k">set</span> <span class="nb">noexpandtab</span>
 </code></pre></div>
 <h3 class="md_header_block" id="h_entry_2021_makefile_tips_index_md__vimrc">.vimrc</h3>
-<div class="highlight"><pre><span></span><code>set expandtab
+<div class="highlight"><pre><span></span><code><span class="k">set</span> <span class="nb">expandtab</span>
 
-let _filename = expand('%:r')
-if _filename == 'Makefile'
-  set noexpandtab
-endif
+<span class="k">let</span> _filename <span class="p">=</span> expand<span class="p">(</span><span class="s1">'%:r'</span><span class="p">)</span>
+<span class="k">if</span> _filename <span class="p">==</span> <span class="s1">'Makefile'</span>
+  <span class="k">set</span> <span class="nb">noexpandtab</span>
+<span class="k">endif</span>
 </code></pre></div>
 <ul>
 <li><a href="https://qiita.com/Lacty/items/23a89d2b999cb0e9fae1">vimでMakefileだけTabスペースではなくTabとして入力する - Qiita</a></li>
