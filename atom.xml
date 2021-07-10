@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>えやみぐさ</title><link href="https://blog.aoirint.com/" rel="alternate"></link><link href="https://blog.aoirint.com/atom.xml" rel="self"></link><id>https://blog.aoirint.com/</id><updated>2021-07-10T10:10:00+09:00</updated><entry><title>GitHub Actions, DockerイメージをビルドしてDocker Hubにpushする（アクセストークン）</title><link href="https://blog.aoirint.com/entry/2021/github_actions_docker_io_token/" rel="alternate"></link><published>2021-07-10T10:10:00+09:00</published><updated>2021-07-10T10:10:00+09:00</updated><id>tag:blog.aoirint.com,2021-07-10 10:10:00.000000:/entry/2021/github_actions_docker_io_token/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2021_github_actions_docker_io_token_index_md_GitHub_Actions_DockerイメージをビルドしてDocker_Hubにpushする_アクセストークン_"&gt;GitHub Actions, DockerイメージをビルドしてDocker Hubにpushする（アクセストークン）&lt;/h1&gt;
 &lt;p&gt;Docker Hubにアクセストークンを追加する。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;https://hub.docker.com/settings/security&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://hub.docker.com/settings/security"&gt;https://hub.docker.com/settings/security&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;リポジトリのSettingsから、Secretsを開き、New repository secretから
 &lt;code&gt;DOCKER_USERNAME&lt;/code&gt;、&lt;code&gt;DOCKER_PASSWORD&lt;/code&gt;を追加する。&lt;/p&gt;
