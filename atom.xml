@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>えやみぐさ</title><link href="https://blog.aoirint.com/" rel="alternate"></link><link href="https://blog.aoirint.com/atom.xml" rel="self"></link><id>https://blog.aoirint.com/</id><updated>2021-07-01T13:00:00+09:00</updated><entry><title>Makefile Tips</title><link href="https://blog.aoirint.com/entry/2021/makefile_tips/" rel="alternate"></link><published>2021-07-01T13:00:00+09:00</published><updated>2021-07-01T13:00:00+09:00</updated><id>tag:blog.aoirint.com,2021-07-01 13:00:00.000000:/entry/2021/makefile_tips/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2021_makefile_tips_index_md_Makefile_Tips"&gt;Makefile Tips&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>えやみぐさ</title><link href="https://blog.aoirint.com/" rel="alternate"></link><link href="https://blog.aoirint.com/atom.xml" rel="self"></link><id>https://blog.aoirint.com/</id><updated>2021-07-10T10:10:00+09:00</updated><entry><title>GitHub Actions, DockerイメージをビルドしてDocker Hubにpushする（アクセストークン）</title><link href="https://blog.aoirint.com/entry/2021/github_actions_docker_io_token/" rel="alternate"></link><published>2021-07-10T10:10:00+09:00</published><updated>2021-07-10T10:10:00+09:00</updated><id>tag:blog.aoirint.com,2021-07-10 10:10:00.000000:/entry/2021/github_actions_docker_io_token/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2021_github_actions_docker_io_token_index_md_GitHub_Actions_DockerイメージをビルドしてDocker_Hubにpushする_アクセストークン_"&gt;GitHub Actions, DockerイメージをビルドしてDocker Hubにpushする（アクセストークン）&lt;/h1&gt;
+&lt;p&gt;Docker Hubにアクセストークンを追加する。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;https://hub.docker.com/settings/security&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;リポジトリのSettingsから、Secretsを開き、New repository secretから
+&lt;code&gt;DOCKER_USERNAME&lt;/code&gt;、&lt;code&gt;DOCKER_PASSWORD&lt;/code&gt;を追加する。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;DOCKER_USERNAME&lt;/code&gt;はDocker Hub上のユーザ名、
+&lt;code&gt;DOCKER_PASSWORD&lt;/code&gt;はアク&lt;/p&gt;</summary></entry><entry><title>Makefile Tips</title><link href="https://blog.aoirint.com/entry/2021/makefile_tips/" rel="alternate"></link><published>2021-07-01T13:00:00+09:00</published><updated>2021-07-01T13:00:00+09:00</updated><id>tag:blog.aoirint.com,2021-07-01 13:00:00.000000:/entry/2021/makefile_tips/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2021_makefile_tips_index_md_Makefile_Tips"&gt;Makefile Tips&lt;/h1&gt;
 &lt;h2 class="md_header_block" id="h_entry_2021_makefile_tips_index_md_Makefileのあるディレクトリの絶対パスを取得する"&gt;Makefileのあるディレクトリの絶対パスを取得する&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;$(pwd)&lt;/code&gt;や相対パスでは、&lt;code&gt;make&lt;/code&gt;コマンドの実行ディレクトリが基準になってしまう。&lt;code&gt;Makefile&lt;/code&gt;の実体があるディレクトリを基準としたいときは、以下のようにROOT_DIRを定義する。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nv"&gt;ROOT_DIR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;dir &lt;span class="k"&gt;$(&lt;/span&gt;realpath &lt;span class="k"&gt;$(&lt;/span&gt;firstword &lt;span class="k"&gt;$(&lt;/span&gt;MAKEFILE_LIST&lt;span class="k"&gt;))))&lt;/span&gt;
@@ -88,12 +96,4 @@ node_modulesを修正していないときに起きる。&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;package-lock.jsonがあれば、
 package-lock.jsonに基づいて依存関係をインストールする&lt;code&gt;npm ci&lt;/code&gt;を実行する。&lt;/p&gt;
-&lt;p&gt;実行時に&lt;/p&gt;</summary></entry><entry><title>Wiki.jsのセットアップ</title><link href="https://blog.aoirint.com/entry/2021/wikijs/" rel="alternate"></link><published>2021-06-01T05:00:00+09:00</published><updated>2021-06-01T05:00:00+09:00</updated><id>tag:blog.aoirint.com,2021-06-01 05:00:00.000000:/entry/2021/wikijs/</id><summary type="html">&lt;h1 class="md_header_block" id="h_entry_2021_wikijs_index_md_Wiki_jsのセットアップ"&gt;Wiki.jsのセットアップ&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://js.wiki/get-started"&gt;https://js.wiki/get-started&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://gigazine.net/news/20201003-wiki-js/"&gt;無料とは思えない多機能っぷりなWikiインフラ「Wiki.js」レビュー、自前でホスト＆外部サービスと連携可能 - GIGAZINE&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 class="md_header_block" id="h_entry_2021_wikijs_index_md_メモリ消費量"&gt;メモリ消費量&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ docker stats
-CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O         PIDS
-e225b6b77209   wikijs_wiki_1   &lt;span class="m"&gt;0&lt;/span&gt;.01%     &lt;span class="m"&gt;127&lt;/span&gt;.6MiB / &lt;span class="m"&gt;7&lt;/span&gt;.681GiB   &lt;span class="m"&gt;1&lt;/span&gt;.62%     &lt;span class="m"&gt;13&lt;/span&gt;.1MB / &lt;span class="m"&gt;22&lt;/span&gt;.7MB   &lt;span class="m"&gt;44&lt;/span&gt;.5MB / &lt;span class="m"&gt;1&lt;/span&gt;.45MB&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary></entry></feed>
+&lt;p&gt;実行時に&lt;/p&gt;</summary></entry></feed>
