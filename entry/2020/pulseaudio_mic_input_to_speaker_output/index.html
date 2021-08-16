@@ -204,6 +204,9 @@
 <p>以下のコマンドで、ID=6のUSBサウンドカードのマイク端子に入力されている音声をスピーカにループバックするモジュールがロードされる。</p>
 <div class="highlight"><pre><span></span><code>pacmd load-module module-loopback <span class="nv">source</span><span class="o">=</span><span class="m">6</span>
 </code></pre></div>
+<p>名前を使って指定することもできる。</p>
+<div class="highlight"><pre><span></span><code>pacmd load-module module-loopback <span class="nv">source</span><span class="o">=</span>alsa_input.usb-GeneralPlus_USB_Audio_Device-00.analog-mono
+</code></pre></div>
 <p>必要に応じて、<code>pavucontrol</code>を開いて出力先デバイスを設定する。</p>
 <p>以下のコマンドで、ループバックモジュールをアンロードする。</p>
 <div class="highlight"><pre><span></span><code>pacmd unload-module module-loopback

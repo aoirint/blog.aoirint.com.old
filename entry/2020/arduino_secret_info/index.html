@@ -215,32 +215,32 @@ arduino-cli compile <span class="se">\</span>
 <span class="cp">#define Q(x) _Q(x)</span>
 
 <span class="cp">#ifdef SECRET_WIFI_SSID</span>
-  <span class="cp">#define WIFI_SSID Q(SECRET_WIFI_SSID)</span>
+<span class="w">  </span><span class="cp">#define WIFI_SSID Q(SECRET_WIFI_SSID)</span>
 <span class="cp">#else</span>
-  <span class="cp">#define WIFI_SSID "WIFI-SSID"</span>
+<span class="w">  </span><span class="cp">#define WIFI_SSID "WIFI-SSID"</span>
 <span class="cp">#endif</span>
 
 <span class="cp">#ifdef SECRET_WIFI_PW</span>
-  <span class="cp">#define WIFI_PW Q(SECRET_WIFI_PW)</span>
+<span class="w">  </span><span class="cp">#define WIFI_PW Q(SECRET_WIFI_PW)</span>
 <span class="cp">#else</span>
-  <span class="cp">#define WIFI_PW "WIFI-PASSWORD"</span>
+<span class="w">  </span><span class="cp">#define WIFI_PW "WIFI-PASSWORD"</span>
 <span class="cp">#endif</span>
 
-<span class="kt">void</span> <span class="nf">initWiFi</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">WiFi</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">WIFI_SSID</span><span class="p">,</span> <span class="n">WIFI_PW</span><span class="p">);</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"WiFi "</span><span class="p">);</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">WIFI_SSID</span><span class="p">);</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">" connecting"</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">initWiFi</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">WiFi</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">WIFI_SSID</span><span class="p">,</span><span class="w"> </span><span class="n">WIFI_PW</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"WiFi "</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">WIFI_SSID</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">" connecting"</span><span class="p">);</span><span class="w"></span>
 
-  <span class="k">while</span> <span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="n">status</span><span class="p">()</span> <span class="o">!=</span> <span class="n">WL_CONNECTED</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"."</span><span class="p">);</span>
-    <span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
-  <span class="p">}</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="n">status</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">WL_CONNECTED</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"."</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
 
-  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">();</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"WiFi connected: "</span><span class="p">);</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="n">localIP</span><span class="p">());</span>
-<span class="p">}</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"WiFi connected: "</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="n">localIP</span><span class="p">());</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <h3 class="md_header_block" id="h_entry_2020_arduino_secret_info_index_md_upload_sh">upload.sh</h3>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
