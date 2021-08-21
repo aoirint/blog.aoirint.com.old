@@ -177,6 +177,25 @@ pacmd load-module module-loopback <span class="nv">source</span><span class="o">
 <div class="highlight"><pre><span></span><code>pacmd unload-module module-loopback
 pacmd unload-module module-null-sink
 </code></pre></div>
+<h2 class="md_header_block" id="h_entry_2020_pulseaudio_split_output_index_md_ログイン時に自動作成する">ログイン時に自動作成する</h2>
+<h3 class="md_header_block" id="h_entry_2020_pulseaudio_split_output_index_md__etc_pulse_default_pa">/etc/pulse/default.pa</h3>
+<div class="highlight"><pre><span></span><code># Custom
+load-module module-null-sink sink_name=DummyOutputApp sink_properties=device.description="DummyOutputApp"
+load-module module-loopback source=DummyOutputApp.monitor
+
+load-module module-null-sink sink_name=DummyOutputVoiceChat sink_properties=device.description="DummyOutputVoiceChat"
+load-module module-loopback source=DummyOutputVoiceChat.monitor
+
+load-module module-null-sink sink_name=DummyOutputGeneral0 sink_properties=device.description="DummyOutputGeneral0"
+load-module module-loopback source=DummyOutputGeneral0.monitor
+
+load-module module-null-sink sink_name=DummyOutputGeneral1 sink_properties=device.description="DummyOutputGeneral1"
+load-module module-loopback source=DummyOutputGeneral1.monitor
+</code></pre></div>
+<h3 class="md_header_block" id="h_entry_2020_pulseaudio_split_output_index_md_PulseAudioの再起動">PulseAudioの再起動</h3>
+<div class="highlight"><pre><span></span><code>pulseaudio --kill
+pulseaudio --start
+</code></pre></div>
 </div>
 
 </article>
@@ -196,6 +215,21 @@ pacmd unload-module module-null-sink
     <li>
       <a href="#h_entry_2020_pulseaudio_split_output_index_md_PulseAudioで特定のアプリケーションからの音声出力だけを分離する" class="toc-item toc-item-h1">
         PulseAudioで特定のアプリケーションからの音声出力だけを分離する
+      </a>
+  
+    <li>
+      <a href="#h_entry_2020_pulseaudio_split_output_index_md_ログイン時に自動作成する" class="toc-item toc-item-h2">
+        ログイン時に自動作成する
+      </a>
+  
+    <li>
+      <a href="#h_entry_2020_pulseaudio_split_output_index_md__etc_pulse_default_pa" class="toc-item toc-item-h3">
+        /etc/pulse/default.pa
+      </a>
+  
+    <li>
+      <a href="#h_entry_2020_pulseaudio_split_output_index_md_PulseAudioの再起動" class="toc-item toc-item-h3">
+        PulseAudioの再起動
       </a>
   
   </ul>
