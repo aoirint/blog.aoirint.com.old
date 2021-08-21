@@ -20,7 +20,7 @@
 
 
 
-<meta property="og:url" content="https://blog.aoirint.com/tags/npm/" />
+<meta property="og:url" content="https://blog.aoirint.com/tags/Game/" />
 <meta property="og:locale" content="ja-JP" />
 <meta property="og:type" content="article" />
 
@@ -144,23 +144,23 @@
 
 <div class="article-metadata">
   <div class="article-date">
-    2021-06-05
+    2021-08-22
   </div>
 
   <div class="article-tags">
 
-    <a href="../../category/Node.js/" class="article-category">
-      Node.js
+    <a href="../../category/Game/" class="article-category">
+      Game
     </a>
 
 
-
-    <a href="../Node.js/" class="article-tag">
-      Node.js
-    </a>
 
     <a href="./" class="article-tag">
-      npm
+      Game
+    </a>
+
+    <a href="../Terraria/" class="article-tag">
+      Terraria
     </a>
 
   </div>
@@ -169,58 +169,12 @@
 
 
 
-      <h2 class="article-title"><a href="../../entry/2021/npm_start_reset_cache/">npm startで構文エラーが消えないときの対処</a></h2>
+      <h2 class="article-title"><a href="../../entry/2021/terraria_tshock_docker/">Terraria TShockサーバをdocker-composeで立てる</a></h2>
 
 
 
       <div class='article-summary'>
-        npm startで構文エラーが消えないときの対処 npm startで構文エラーが消えなくなることがある。 npm startでサーバを起動してコードの変更を監視したままの状態で、gitでブランチを切り替えたときキャッシュが正しく更新されないことが原因と思われる。 キャッシュを破棄するには、 npm start -- --reset-cache 依存関係が変わっているとエラーの原因になるので、モジュールもインストールし直すのがよい。 npm ci https://qiita.com/kt3k/items/758c4f3595ffd7
-      </div>
-
-    </article>
-
-    <hr>
-
-
-
-
-
-    <article class="article">
-      
-
-<div class="article-metadata">
-  <div class="article-date">
-    2021-06-05
-  </div>
-
-  <div class="article-tags">
-
-    <a href="../../category/Node.js/" class="article-category">
-      Node.js
-    </a>
-
-
-
-    <a href="../Node.js/" class="article-tag">
-      Node.js
-    </a>
-
-    <a href="./" class="article-tag">
-      npm
-    </a>
-
-  </div>
-
-</div>
-
-
-
-      <h2 class="article-title"><a href="../../entry/2021/npm_start_enoent_steampath/">npm startでError: ENOENT: no such file or directory ... .steampathで起動しないときの対処</a></h2>
-
-
-
-      <div class='article-summary'>
-        npm startでError: ENOENT: no such file or directory ... .steampathで起動しないときの対処 gitでブランチを切り替えて依存関係に差分が生じたとき、 node_modulesを修正していないときに起きる。 Error: ENOENT: no such file or directory, stat &#39;/home/USER/.steampath&#39; package-lock.jsonがあれば、 package-lock.jsonに基づいて依存関係をインストールするnpm ciを実行する。 実行時に
+        Terraria TShockサーバをdocker-composeで立てる https://github.com/Pryaxis/TShock https://hub.docker.com/r/ryshe/terraria/ 上記URLから最新（もしくは対応する）バージョンを確認して、イメージタグのバージョンを変更する。 既存のワールドを使用する場合は、./data/worlds/に.wldファイルを配置し、WORLD_FILENAMEを変更する。 docker-compose.yml version: &#39;3.9&#39; serv
       </div>
 
     </article>
@@ -448,7 +402,7 @@
       </a>
 
     <li>
-      <a href="../Game/" class="tag-item">
+      <a href="./" class="tag-item">
         Game (1)
       </a>
 
@@ -658,7 +612,7 @@
       </a>
 
     <li>
-      <a href="./" class="tag-item">
+      <a href="../npm/" class="tag-item">
         npm (2)
       </a>
 

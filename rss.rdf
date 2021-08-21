@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>えやみぐさ</title><link>https://blog.aoirint.com/</link><description></description><lastBuildDate>Sun, 22 Aug 2021 04:20:00 +0900</lastBuildDate><item><title>PulseAudioで特定のアプリケーションからの音声出力だけを分離する</title><link>https://blog.aoirint.com/entry/2020/pulseaudio_split_output/</link><description>&lt;h1 class="md_header_block" id="h_entry_2020_pulseaudio_split_output_index_md_PulseAudioで特定のアプリケーションからの音声出力だけを分離する"&gt;PulseAudioで特定のアプリケーションからの音声出力だけを分離する&lt;/h1&gt;
+<rss version="2.0"><channel><title>えやみぐさ</title><link>https://blog.aoirint.com/</link><description></description><lastBuildDate>Sun, 22 Aug 2021 05:25:00 +0900</lastBuildDate><item><title>Terraria TShockサーバをdocker-composeで立てる</title><link>https://blog.aoirint.com/entry/2021/terraria_tshock_docker/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_terraria_tshock_docker_index_md_Terraria_TShockサーバをdocker_composeで立てる"&gt;Terraria TShockサーバをdocker-composeで立てる&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;https://github.com/Pryaxis/TShock&lt;/li&gt;
+&lt;li&gt;https://hub.docker.com/r/ryshe/terraria/&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;上記URLから最新（もしくは対応する）バージョンを確認して、イメージタグのバージョンを変更する。&lt;/p&gt;
+&lt;p&gt;既存のワールドを使用する場合は、&lt;code&gt;./data/worlds/&lt;/code&gt;に&lt;code&gt;.wld&lt;/code&gt;ファイルを配置し、&lt;code&gt;WORLD_FILENAME&lt;/code&gt;を変更する。&lt;/p&gt;
+&lt;h2 class="md_header_block" id="h_entry_2021_terraria_tshock_docker_index_md_docker_compose_yml"&gt;docker-compose.yml&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;version&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;'3.9'&lt;/span&gt;
+&lt;span class="nt"&gt;serv&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><pubDate>Sun, 22 Aug 2021 05:25:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-08-22 05:25:00.000000:/entry/2021/terraria_tshock_docker/</guid></item><item><title>PulseAudioで特定のアプリケーションからの音声出力だけを分離する</title><link>https://blog.aoirint.com/entry/2020/pulseaudio_split_output/</link><description>&lt;h1 class="md_header_block" id="h_entry_2020_pulseaudio_split_output_index_md_PulseAudioで特定のアプリケーションからの音声出力だけを分離する"&gt;PulseAudioで特定のアプリケーションからの音声出力だけを分離する&lt;/h1&gt;
 &lt;p&gt;以下のコマンドで仮想出力デバイス&lt;code&gt;DummyOutput0&lt;/code&gt;と、そのループバック&lt;code&gt;Loopback from Monitor of DummyOutput0&lt;/code&gt;が追加される。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pacmd load-module module-null-sink &lt;span class="nv"&gt;sink_name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;DummyOutput0 &lt;span class="nv"&gt;sink_properties&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;device.description&lt;span class="o"&gt;=&lt;/span&gt;DummyOutput0
 pacmd load-module module-loopback &lt;span class="nv"&gt;source&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;Dum&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><pubDate>Mon, 09 Nov 2020 06:00:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2020-11-09 06:00:00.000000:/entry/2020/pulseaudio_split_output/</guid></item><item><title>PulseAudioでマイク入力をスピーカから出力する</title><link>https://blog.aoirint.com/entry/2020/pulseaudio_mic_input_to_speaker_output/</link><description>&lt;h1 class="md_header_block" id="h_entry_2020_pulseaudio_mic_input_to_speaker_output_index_md_PulseAudioでマイク入力をスピーカから出力する"&gt;PulseAudioでマイク入力をスピーカから出力する&lt;/h1&gt;
@@ -71,21 +80,4 @@ Defaults        env_keep+="NO_PROXY"
 &lt;h2 class="md_header_block" id="h_entry_2021_transproxy_ubuntu_index_md_環境変数"&gt;環境変数&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;HTTP_PROXY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;http://proxy.example.com:8080/
 &lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;HTTPS_PROXY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;http://proxy.example.com:8080/
-&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;NO_PROXY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;localhost,127&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><pubDate>Mon, 21 Jun 2021 18:10:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-06-21 18:10:00.000000:/entry/2021/transproxy_ubuntu/</guid></item><item><title>bind9</title><link>https://blog.aoirint.com/entry/2021/bind9/</link><description>&lt;h1 class="md_header_block" id="h_entry_2021_bind9_index_md_bind9"&gt;bind9&lt;/h1&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;server$ sudo apt install bind9
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 class="md_header_block" id="h_entry_2021_bind9_index_md_使用中のDNSサーバの確認"&gt;使用中のDNSサーバの確認&lt;/h2&gt;
-&lt;p&gt;クライアントに設定されているDNSサーバは&lt;code&gt;nmcli&lt;/code&gt;コマンドで確認できる。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ nmcli device show &lt;span class="p"&gt;|&lt;/span&gt; grep DNS
-IP4.DNS&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;:                             &lt;span class="m"&gt;8&lt;/span&gt;.8.8.8
-IP4.DNS&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;:                             &lt;span class="m"&gt;8&lt;/span&gt;.8.4.4
-IP4.DNS&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;:                             &lt;span class="m"&gt;1&lt;/span&gt;.1.1.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://askubuntu.com/questions/152593/command-line-to-list-dns-servers-used-by-my-system"&gt;Command-line to list DNS servers used by my system - Ask Ubuntu&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 class="md_header_block" id="h_entry_2021_bind9_index_md_用語"&gt;用語&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://cos.linux-dvr.biz/archives/category/bind-dns%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%A7%8B%E7%AF%89"&gt;BIND DNSサーバー構築 | CentOSサーバー構築入門&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 class="md_header_block" id="h_entry_2021_bind9_index_md_コンテンツサーバ_権威サーバ_"&gt;コンテンツサーバ（権威サーバ）&lt;/h3&gt;</description><pubDate>Wed, 09 Jun 2021 01:30:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-06-09 01:30:00.000000:/entry/2021/bind9/</guid></item></channel></rss>
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;NO_PROXY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;localhost,127&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><pubDate>Mon, 21 Jun 2021 18:10:00 +0900</pubDate><guid isPermaLink="false">tag:blog.aoirint.com,2021-06-21 18:10:00.000000:/entry/2021/transproxy_ubuntu/</guid></item></channel></rss>
